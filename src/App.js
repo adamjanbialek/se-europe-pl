@@ -13,7 +13,7 @@ function App() {
           <NavbarComponent />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/moja-zlacze" element={<MyCoupling />} />
+          <Route path="/moje-zlacze" element={<MyCoupling />} />
           <Route path="/moja-maszyna" element={<MyMachine />} />
         </Routes>
           <FooterComponent />

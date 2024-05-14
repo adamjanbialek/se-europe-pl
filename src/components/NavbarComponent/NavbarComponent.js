@@ -10,16 +10,17 @@ import {Link} from "react-router-dom";
 import {MyCoupling} from "../../pages/MyCoupling/MyCoupling";
 import {AboutUs} from "../../pages/AboutUs/AboutUs";
 import {MyMachine} from "../../pages/MyMachine/MyMachine";
+import {HomePage} from "../../pages/HomePage/HomePage";
 
 export const NavbarComponent = () => {
     return (
         <nav className={'nav'}>
             <div className={'nav--top'}>
-                <div>
+                <Link to={'/'} element={<HomePage />}>
                     <picture className={'se-logo'}>
                         <img src={seLogo} alt={'SE Europe logo'} />
                     </picture>
-                </div>
+                </Link>
                 <div className={'icons-container'}>
                     <div className={'socials'}>
                         <picture className={'icon'}>
