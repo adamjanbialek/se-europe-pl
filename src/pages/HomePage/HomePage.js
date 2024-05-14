@@ -77,6 +77,9 @@ export const HomePage = () => {
                     </Link>
                 </div>
             </section>
+            <section>
+                <div className={'end-of-page'}></div>
+            </section>
         </main>
     );
 }

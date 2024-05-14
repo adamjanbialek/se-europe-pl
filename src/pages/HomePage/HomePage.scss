@@ -51,6 +51,8 @@
 }
 
 .vehicles {
+  text-align: center;
+
   p + h2 {
     margin-top: 100px;
   }
@@ -66,5 +68,13 @@
     height: 234px;
     max-width: 202px;
     width: 100%;
+    color: #2d2d2d;
   }
+}
+
+.end-of-page {
+  background: #2d2d2d;
+  height: 4px;
+  width: 65px;
+  margin: 50px auto 10px;
 }

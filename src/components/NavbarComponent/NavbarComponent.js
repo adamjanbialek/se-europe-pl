@@ -5,6 +5,11 @@ import iconFb from '../../assets/icons/icon-facebook.png';
 import iconIg from '../../assets/icons/icon-instagram.png';
 import iconYt from '../../assets/icons/icon-youtube.png';
 import iconMail from '../../assets/icons/icon-mail.png';
+import hamburger from '../../assets/icons/hamburger.svg';
+import {Link} from "react-router-dom";
+import {MyCoupling} from "../../pages/MyCoupling/MyCoupling";
+import {AboutUs} from "../../pages/AboutUs/AboutUs";
+import {MyMachine} from "../../pages/MyMachine/MyMachine";
 
 export const NavbarComponent = () => {
     return (
@@ -31,14 +36,16 @@ export const NavbarComponent = () => {
                         </picture>
                     </div>
                     <div className={'sidebar-toggle'}>
-                        <picture>
-                            <img src="/public/se-logo.png" />
+                        <picture className={'icon'}>
+                            <img src={hamburger} />
                         </picture>
                     </div>
                 </div>
             </div>
             <div className={'nav--bottom'}>
-
+                <Link to={'/moje-zlacze'} element={<MyCoupling/>}>Moje złączę</Link>
+                <Link to={'/moja-maszyna'} element={<MyMachine/>}>Moja maszyna</Link>
+                <Link to={'/o-nas'} element={<AboutUs/>}>O nas</Link>
             </div>
         </nav>
     );
