@@ -18,7 +18,7 @@ export const NavbarComponent = () => {
             <div className={'nav--top'}>
                 <Link to={'/'} element={<HomePage />}>
                     <picture className={'se-logo'}>
-                        <img src={seLogo} alt={'SE Europe logo'} />
+                        <img src={seLogo} alt={'SE Europe log'} />
                     </picture>
                 </Link>
                 <div className={'icons-container'}>
