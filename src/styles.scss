@@ -1,5 +1,12 @@
 @import "styles/globals/reset-styles";
 @import "styles/globals/fonts";
+@import "styles/globals/typography";
+
+.section-contrains {
+  max-width: 1320px;
+  padding: 0 60px;
+  margin-inline: auto;
+}
 
 picture {
   display: block;
@@ -13,8 +20,4 @@ picture {
 
 a {
   text-decoration: none;
-}
-
-h1,h2,h3,h4,h5,p,span,a,div,ul,ol,li {
-  font-family: 'Avenir Book 45', sans-serif;
 }

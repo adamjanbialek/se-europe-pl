@@ -7,13 +7,13 @@ import bgShape from '../../assets/footer/footer-shape.png';
 
 export const FooterComponent = () => {
     return (
-        <footer>
+        <footer className={'text-shadow'}>
             <div className={'bg-shape'}>
                 <picture>
                     <img src={bgShape} alt={'a shape in background'}/>
                 </picture>
             </div>
-            <div className={'footer-container'}>
+            <div className={'footer-container section-contrains'}>
                 <div className={'subsection__container'}>
                     <picture className={'footer-icon'}>
                         <img src={headset} alt={'headset icon'}/>

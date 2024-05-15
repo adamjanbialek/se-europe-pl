@@ -12,15 +12,22 @@ import {Link} from "react-router-dom";
 export const HomePage = () => {
     return (
         <main>
-            <picture className={'screenwide'}>
-                <img src={vehiclePart}/>
-            </picture>
-            <section className={'place-order'}>
+            <section className={'screenwide-photo-section'}>
+                <picture className={'screenwide'}>
+                    <img src={vehiclePart}/>
+                </picture>
+                <div className={'section-contrains'}>
+                    <div className={'reseller'}>
+                        Znajdź sprzedawcę
+                    </div>
+                </div>
+            </section>
+            <section className={'section-contrains place-order'}>
                 <div className={'gradient-box-container'}>
                     <div className={'gradient-box'}>
-                        <h2>Place your order through our e-commerce</h2>
-                        <p>Receive a construction shovel to the value of 350sek!</p>
-                        <span>OBS! Offer do not apply to brackets spare parts.</span>
+                        <h2 className={'section-title'}>Place your order through our e-commerce</h2>
+                        <p className={'section-subtitle'}>Receive a construction shovel to the value of 350sek!</p>
+                        <span className={'paragraph'}>OBS! Offer do not apply to brackets spare parts.</span>
                     </div>
                     <div className={'img-box'}>
                         <picture className={''}>
@@ -29,55 +36,57 @@ export const HomePage = () => {
                     </div>
                 </div>
             </section>
-            <section className={'vehicles'}>
-                <p>
+            <section className={'section-contrains vehicles'}>
+                <p className={'paragraph paragraph--large'}>
                     SE Equipment AB magazynuje i dostarcza sprzęt, aby szybko zaspokoić potrzeby Twoje i rynku.
                     Zaopatrujemy sprzedawców detalicznych w całej Europie w szeroką gamę wysokiej jakości produktów z
                     naszego dużego magazynu w Linköping. Cała sprzedaż odbywa się za pośrednictwem naszych sprzedawców.
                 </p>
-                <h2>
+                <h2 className={'page-title'}>
                     DESIGN - JAKOŚĆ - BEZPIECZEŃSTWO - CENA
                 </h2>
-                <div className={'vehicles-list'}>
-                    <Link className={'vehicle-link'} to="">
-                        <picture>
-                            <img src={wheelLoader}/>
-                        </picture>
-                        <p className={'vehicle-name'}>ŁADOWARKA KOŁOWA</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <picture>
-                            <img src={excavator}/>
-                        </picture>
-                        <p className={'vehicle-name'}>KOPARKA</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <picture>
-                            <img src={tractor}/>
-                        </picture>
-                        <p className={'vehicle-name'}>TRAKTOR</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <picture>
-                            <img src={telescopicHandler}/>
-                        </picture>
-                        <p className={'vehicle-name'}>PODNOŚNIK TELESKOPOWY</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <picture>
-                            <img src={skidLoader}/>
-                        </picture>
-                        <p className={'vehicle-name'}>ŁADOWARKA SKRZYNKOWA</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <picture>
-                            <img src={forkLift}/>
-                        </picture>
-                        <p className={'vehicle-name'}>WÓZEK WIDŁOWY</p>
-                    </Link>
+                <div className={'list-container'}>
+                    <div className={'vehicles-list'}>
+                        <Link className={'vehicle-link'} to="">
+                            <picture>
+                                <img src={wheelLoader}/>
+                            </picture>
+                            <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA KOŁOWA</p>
+                        </Link>
+                        <Link className={'vehicle-link'} to="">
+                            <picture>
+                                <img src={excavator}/>
+                            </picture>
+                            <p className={'vehicle-name link-title--smaller'}>KOPARKA</p>
+                        </Link>
+                        <Link className={'vehicle-link'} to="">
+                            <picture>
+                                <img src={tractor}/>
+                            </picture>
+                            <p className={'vehicle-name link-title--smaller'}>TRAKTOR</p>
+                        </Link>
+                        <Link className={'vehicle-link'} to="">
+                            <picture>
+                                <img src={telescopicHandler}/>
+                            </picture>
+                            <p className={'vehicle-name link-title--smaller'}>PODNOŚNIK TELESKOPOWY</p>
+                        </Link>
+                        <Link className={'vehicle-link'} to="">
+                            <picture>
+                                <img src={skidLoader}/>
+                            </picture>
+                            <p className={'vehicle-name link-title--smaller'}>ŁADOWARKA SKRZYNKOWA</p>
+                        </Link>
+                        <Link className={'vehicle-link'} to="">
+                            <picture>
+                                <img src={forkLift}/>
+                            </picture>
+                            <p className={'vehicle-name link-title--smaller'}>WÓZEK WIDŁOWY</p>
+                        </Link>
+                    </div>
                 </div>
             </section>
-            <section>
+            <section className={'section-contrains'}>
                 <div className={'end-of-page'}></div>
             </section>
         </main>

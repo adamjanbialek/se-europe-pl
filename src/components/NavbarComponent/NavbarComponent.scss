@@ -12,8 +12,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    text-shadow: 1px 1px 1px #00000054;
 
     a {
       color: white;
@@ -21,9 +19,12 @@
       height: 100%;
       display: flex;
       align-items: center;
+      padding: 0 25px;
+      box-sizing: border-box;
 
       &:hover {
         background: #bbb;
+        cursor: pointer;
       }
     }
   }
@@ -59,4 +60,37 @@
 
 .socials {
   display: flex;
+}
+
+.submenu-container {
+  height: 100%;
+  max-width: 270px;
+  width: 100%;
+}
+
+.submenu {
+  position: absolute;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &::after {
+      content: url("../../assets/icons/dropdown.png");
+      transform: rotate(-90deg);
+      height: 10px;
+      width: 10px;
+      transition: .15s all ease-out;
+    }
+  }
+
+  &__link-container {
+    height: 100%;
+
+    &:hover {
+      .submenu__title::after {
+        transform: rotate(0);
+      }
+    }
+  }
 }

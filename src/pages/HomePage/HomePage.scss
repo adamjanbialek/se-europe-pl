@@ -1,3 +1,16 @@
+.screenwide-photo-section {
+  position: relative;
+
+  .reseller {
+    position: absolute;
+    border-radius: 10px;
+    background: #1d6cc1;
+    padding: 15px;
+    left: 0;
+    bottom: 0;
+    color: white;
+  }
+}
 .screenwide {
   height: 442px;
 }
@@ -6,7 +19,8 @@
   .gradient-box-container {
     display: flex;
     height: 306px;
-    width: 1020px;
+    max-width: 1020px;
+    width: 100%;;
     overflow: hidden;
     border-radius: 18px;
     background-image: linear-gradient(185deg, rgb(31, 175, 79), rgb(87, 138, 54));
@@ -18,6 +32,7 @@
   }
 
   .gradient-box {
+    box-sizing: border-box;
     padding: 35px;
     text-align: left;
     display: flex;
@@ -33,20 +48,14 @@
 
   h2 {
     color: rgb(10, 49, 102);
-    font-size: 36px;
-    line-height: 1.32;
   }
 
   p {
     color: white;
-    font-size: 24px;
-    line-height: 1.32;
   }
 
   span {
     color: rgb(17, 17, 17);
-    font-size: 16px;
-    line-height: 1.32;
   }
 }
 
@@ -59,9 +68,9 @@
 }
 
 .vehicles-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 202px);
   justify-content: center;
-  flex-wrap: wrap;
   gap: 10px;
   margin: 150px 0;
 
