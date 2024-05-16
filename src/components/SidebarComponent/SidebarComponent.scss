@@ -5,14 +5,51 @@ aside {
   background: white;
   top: 0;
   right: 0;
-  transform: translateX(100%);
+  transition: .3s all ease-in-out;
+  max-width: 350px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 20px;
 
-  .section-title {
-    &::after {
-      /* TODO: Podmienić tymczasowe wartości w klasie */
-      content: 'x';
-      width: fit-content;
-      height: 18px;
+  &.aside-container--hidden {
+    transform: translateX(100%);
+  }
+
+  .aside__line-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0;
+
+    &:first-of-type {
+      justify-content: center;
+
+      .btn {
+        position: absolute;
+        left: 20px;
+      }
     }
+
+    a {
+      color: black;
+
+      &:not(:first-of-type) {
+        margin-top: 7px;
+      }
+    }
+
+    &--column {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &:not(:first-of-type) {
+      border-top: 1px solid rgba(170,170,170,.35);
+    }
+  }
+
+  .sidebar-icon {
+    height: 20px;
+    width: 20px;
   }
 }
