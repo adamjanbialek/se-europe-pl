@@ -5,7 +5,7 @@ export const TableComponent = () => {
                 /* TODO: zaimplementować material-ui */
                 <div className={''}>
                     <div>
-                        Waga maszyn
+                        Waga maszyny
                     </div>
 
                 </div>

@@ -1,18 +1,35 @@
 .screenwide-photo-section {
   position: relative;
+  height: 442px;
+  display: flex;
 
   .reseller {
-    position: absolute;
     border-radius: 10px;
     background: #1d6cc1;
     padding: 15px;
     left: 0;
     bottom: 0;
     color: white;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 50px;
+  }
+
+  .section-contrains {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    z-index: 1;
   }
 }
+
 .screenwide {
-  height: 442px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .place-order {
@@ -73,12 +90,43 @@
   justify-content: center;
   gap: 10px;
   margin: 150px 0;
+  padding: 38px 0;
+  background-color: #f1f1f1;
+
+  &:hover {
+    .vehicle-link {
+      img {
+        filter: blur(1px);
+        opacity: .8;
+      }
+    }
+  }
+
+  .vehicle-link {
+    &:hover {
+      picture {
+        img {
+          filter: none;
+          opacity: 1;
+        }
+      }
+    }
+  }
 
   .vehicle-link {
     height: 234px;
     max-width: 202px;
     width: 100%;
     color: #2d2d2d;
+
+    p {
+      margin-top: 8px;
+    }
+  }
+
+  img {
+    transition: .2s all;
+    border-radius: 7px;
   }
 }
 

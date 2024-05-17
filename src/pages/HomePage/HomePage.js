@@ -17,9 +17,9 @@ export const HomePage = () => {
                     <img src={vehiclePart}/>
                 </picture>
                 <div className={'section-contrains'}>
-                    <div className={'reseller'}>
+                    <a className={'reseller'}>
                         Znajdź sprzedawcę
-                    </div>
+                    </a>
                 </div>
             </section>
             <section className={'section-contrains place-order'}>
@@ -36,15 +36,17 @@ export const HomePage = () => {
                     </div>
                 </div>
             </section>
-            <section className={'section-contrains vehicles'}>
-                <p className={'paragraph paragraph--large'}>
-                    SE Equipment AB magazynuje i dostarcza sprzęt, aby szybko zaspokoić potrzeby Twoje i rynku.
-                    Zaopatrujemy sprzedawców detalicznych w całej Europie w szeroką gamę wysokiej jakości produktów z
-                    naszego dużego magazynu w Linköping. Cała sprzedaż odbywa się za pośrednictwem naszych sprzedawców.
-                </p>
-                <h2 className={'page-title'}>
-                    DESIGN - JAKOŚĆ - BEZPIECZEŃSTWO - CENA
-                </h2>
+            <section className={'vehicles'}>
+                <div className={'section-contrains'}>
+                    <p className={'paragraph paragraph--large'}>
+                        SE Equipment AB magazynuje i dostarcza sprzęt, aby szybko zaspokoić potrzeby Twoje i rynku.
+                        Zaopatrujemy sprzedawców detalicznych w całej Europie w szeroką gamę wysokiej jakości produktów z
+                        naszego dużego magazynu w Linköping. Cała sprzedaż odbywa się za pośrednictwem naszych sprzedawców.
+                    </p>
+                    <h2 className={'page-title'}>
+                        DESIGN - JAKOŚĆ - BEZPIECZEŃSTWO - CENA
+                    </h2>
+                </div>
                 <div className={'list-container'}>
                     <div className={'vehicles-list'}>
                         <Link className={'vehicle-link'} to="">

@@ -1,5 +1,4 @@
 import './MyCoupling.scss';
-import {Link} from "react-router-dom";
 import atlas from "../../assets/couplings/Atlas65.png";
 import avant from "../../assets/couplings/avant.png";
 import bobcat from "../../assets/couplings/bobcat.png";
@@ -20,155 +19,48 @@ import sms from "../../assets/couplings/sms.png";
 import bigBm from "../../assets/couplings/bigBM.png";
 import terex from "../../assets/couplings/terex.png";
 import weidemann from "../../assets/couplings/weidemann.png";
+import {LinksListWithImages} from "../../components/LinksListWithImages/LinksListWithImages";
 
 export const MyCoupling = () => {
+    const products = [
+        {name: '3 punkt', imgUrl: ''},
+        {name: 'Atlas', imgUrl: atlas},
+        {name: 'Avant', imgUrl: avant},
+        {name: 'Bobcat', imgUrl: bobcat},
+        {name: 'Cat 906', imgUrl: cat},
+        {name: 'Dieci', imgUrl: ''},
+        {name: 'Euro', imgUrl: euro},
+        {name: 'Faresin', imgUrl: ''},
+        {name: 'Giant', imgUrl: giant},
+        {name: 'Hydrema 45', imgUrl: hydrema},
+        {name: 'ISME', imgUrl: ''},
+        {name: 'JCB', imgUrl: jcb},
+        {name: 'John Deere', imgUrl: johnDeere},
+        {name: 'Kramer 180-350', imgUrl: kramer180},
+        {name: 'Kramer 380-580', imgUrl: kramer380},
+        {name: 'L20/L25 UPP TILL L220', imgUrl: l20},
+        {name: 'LILLA BM', imgUrl: smallBm},
+        {name: 'Magni', imgUrl: ''},
+        {name: 'Manitou', imgUrl: manitou},
+        {name: 'S1 UPP TILL S3', imgUrl: s1Upp},
+        {name: 'S30 UPP TILL S90', imgUrl: sCouplings},
+        {name: 'SMP 105', imgUrl: ''},
+        {name: 'Sms', imgUrl: sms},
+        {name: 'Stora Bm', imgUrl: bigBm},
+        {name: 'Terex', imgUrl: terex},
+        {name: 'Triangelfaste', imgUrl: ''},
+        {name: 'Vl', imgUrl: ''},
+        {name: 'Weidemann', imgUrl: weidemann},
+        {name: 'Wille', imgUrl: ''},
+        {name: 'Alo', imgUrl: ''},
+    ];
+
     return (
         <main className={'my-machine'}>
             <section className={'section-contrains'}>
                 <h1>Moja złączę</h1>
                 <p>Kliknij</p>
-                <div className={'vehicles-list'}>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={atlas}/>
-                        </picture>
-                        <p className={'vehicle-name'}>ATLAS</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={avant}/>
-                        </picture>
-                        <p className={'vehicle-name'}>AVANT</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={bobcat}/>
-                        </picture>
-                        <p className={'vehicle-name'}>BOBCAT</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={cat}/>
-                        </picture>
-                        <p className={'vehicle-name'}>CAT 906</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={euro}/>
-                        </picture>
-                        <p className={'vehicle-name'}>EURO</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={giant}/>
-                        </picture>
-                        <p className={'vehicle-name'}>GIANT</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={hydrema}/>
-                        </picture>
-                        <p className={'vehicle-name'}>HYDREMA 45</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={jcb}/>
-                        </picture>
-                        <p className={'vehicle-name'}>JCB</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={johnDeere}/>
-                        </picture>
-                        <p className={'vehicle-name'}>JOHN DEERE</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={kramer180}/>
-                        </picture>
-                        <p className={'vehicle-name'}>KRAMER 180-350</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={kramer380}/>
-                        </picture>
-                        <p className={'vehicle-name'}>KRAMER 380-580</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={l20}/>
-                        </picture>
-                        <p className={'vehicle-name'}>L20/L25 UP TO L220</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={smallBm}/>
-                        </picture>
-                        <p className={'vehicle-name'}>SMALL BM</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={manitou}/>
-                        </picture>
-                        <p className={'vehicle-name'}>MANITOU</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={s1Upp}/>
-                        </picture>
-                        <p className={'vehicle-name'}>S1 UPP TILL S3</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={sCouplings}/>
-                        </picture>
-                        <p className={'vehicle-name'}>S-COUPLINGS</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={sms}/>
-                        </picture>
-                        <p className={'vehicle-name'}>SMS</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={bigBm}/>
-                        </picture>
-                        <p className={'vehicle-name'}>BIG BM</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={terex}/>
-                        </picture>
-                        <p className={'vehicle-name'}>TEREX</p>
-                    </Link>
-                    <Link className={'vehicle-link'} to="">
-                        <div className={'bg-change'}/>
-                        <picture>
-                            <img src={weidemann}/>
-                        </picture>
-                        <p className={'vehicle-name'}>WEIDEMANN</p>
-                    </Link>
-                </div>
+                <LinksListWithImages data={products} />
             </section>
         </main>
     );
