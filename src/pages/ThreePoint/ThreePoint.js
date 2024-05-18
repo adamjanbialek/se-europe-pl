@@ -6,9 +6,11 @@ import {TableWithTabs} from "../../components/TableWithTabs/TableWithTabs";
 export const ThreePoint = () => {
     return (
         <main>
-            <section className={'section-contrains'}>
-                <h1>Moja złączę</h1>
-                <p>Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.</p>
+            <section className={'section-contrains tables-page'}>
+                <div className={'heading-container'}>
+                    <h1 className={'page-title'}>Moja złączę</h1>
+                    <p className={'paragraph paragraph--medium'}>Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.</p>
+                </div>
                 <div className={'available-choices-container'}>
                     <div className={'choice-container'}>
                         <h2>Waga Maszyny</h2>
@@ -16,7 +18,7 @@ export const ThreePoint = () => {
                     </div>
                     <div className={'choice-container'}>
                         <h2>Złącze</h2>
-                        <div>
+                        <div className={'choice-container__checkboxes'}>
                             <BoxWithCheckboxes label={'Option 1'} />
                             <BoxWithCheckboxes label={'Option 2'} />
                         </div>

@@ -5,23 +5,24 @@ import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 
 function valuetext(value) {
-    return `${value}°C`;
+    return `${value}kg`;
 }
 
 export const SliderRangeComponent = () => {
-    const [value, setValue] = React.useState([20, 37]);
+    const [value, setValue] = React.useState([0, 4500]);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
     return (
-        <Box sx={{ width: 300 }}>
+        <Box className={'slider-container'}>
             <Slider
-                getAriaLabel={() => 'Temperature range'}
+                getAriaLabel={() => 'Capacity range'}
                 value={value}
+                max={6000}
                 onChange={handleChange}
-                valueLabelDisplay="auto"
+                valueLabelDisplay="on"
                 getAriaValueText={valuetext}
             />
         </Box>

@@ -19,11 +19,12 @@ export const MyMachine = () => {
 
     return (
         <main className={'my-machine'}>
-            <section className={'section-contrains'}>
-                <h1>Moja maszyna</h1>
-                <div>
-                    <LinksListWithImages data={products} />
+
+            <section className={'section-contrains tables-page'}>
+                <div className={'heading-container'}>
+                    <h1 className={'page-title'}>Moja maszyna</h1>
                 </div>
+                <LinksListWithImages data={products} />
             </section>
         </main>
     );

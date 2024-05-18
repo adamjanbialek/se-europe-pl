@@ -18,7 +18,7 @@ export const HomePage = () => {
                 </picture>
                 <div className={'section-contrains'}>
                     <a className={'reseller'}>
-                        Znajdź sprzedawc
+                        Znajdź sprzedawcę
                     </a>
                 </div>
             </section>

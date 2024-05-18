@@ -57,9 +57,11 @@ export const MyCoupling = () => {
 
     return (
         <main className={'my-machine'}>
-            <section className={'section-contrains'}>
-                <h1>Moja złączę</h1>
-                <p>Kliknij</p>
+            <section className={'section-contrains tables-page'}>
+                <div className={'heading-container'}>
+                    <h1 className={'page-title'}>Moja złączę</h1>
+                    <p className={'paragraph paragraph--medium'}>Kliknij</p>
+                </div>
                 <LinksListWithImages data={products} />
             </section>
         </main>

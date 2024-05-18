@@ -62,46 +62,46 @@ export const NavbarComponent = () => {
                     <div className={'submenu__link-container'}>
                         <Link className={'submenu__title'} to={'/moje-zlacze'} element={<MyCoupling/>}>Moje złączę</Link>
                     </div>
-                    <ul className={'submenu'}>
-                        <li>
-                            <Link to={'/'} element={<MyCoupling/>}>Atlas</Link>
-                        </li>
-                        <li>
-                            <Link to={'/'} element={<MyCoupling/>}>Avant</Link>
-                        </li>
-                        <li>
-                            <Link to={'/'} element={<MyCoupling/>}>Bobcat</Link>
-                        </li>
-                    </ul>
+                    {/*<ul className={'submenu'}>*/}
+                    {/*    <li>*/}
+                    {/*        <Link to={'/'} element={<MyCoupling/>}>Atlas</Link>*/}
+                    {/*    </li>*/}
+                    {/*    <li>*/}
+                    {/*        <Link to={'/'} element={<MyCoupling/>}>Avant</Link>*/}
+                    {/*    </li>*/}
+                    {/*    <li>*/}
+                    {/*        <Link to={'/'} element={<MyCoupling/>}>Bobcat</Link>*/}
+                    {/*    </li>*/}
+                    {/*</ul>*/}
                 </div>
                 <div className={'submenu-container'}>
                     <div className={'submenu__link-container'}>
                         <Link className={'submenu__title'} to={'/moja-maszyna'} element={<MyMachine/>}>Moja maszyna</Link>
                     </div>
-                    <ul className={'submenu'}>
-                        <li>
-                            <Link to={'/'} element={<MyCoupling/>}>ŁADOWARKA KOŁOWA</Link>
-                        </li>
-                        <li>
-                            <Link to={'/'} element={<MyCoupling/>}>Koparka</Link>
-                        </li>
-                        <li>
-                            <Link to={'/'} element={<MyCoupling/>}>Traktor</Link>
-                        </li>
-                    </ul>
+                    {/*<ul className={'submenu'}>*/}
+                    {/*    <li>*/}
+                    {/*        <Link to={'/'} element={<MyCoupling/>}>ŁADOWARKA KOŁOWA</Link>*/}
+                    {/*    </li>*/}
+                    {/*    <li>*/}
+                    {/*        <Link to={'/'} element={<MyCoupling/>}>Koparka</Link>*/}
+                    {/*    </li>*/}
+                    {/*    <li>*/}
+                    {/*        <Link to={'/'} element={<MyCoupling/>}>Traktor</Link>*/}
+                    {/*    </li>*/}
+                    {/*</ul>*/}
                 </div>
                 <div className={'submenu-container'}>
                     <div className={'submenu__link-container'}>
                         <Link className={'submenu__title'} to={'/o-nas'} element={<AboutUs/>}>O nas</Link>
                     </div>
-                    <ul className={'submenu'}>
-                        <li>
-                            <Link to={'/'} element={<MyCoupling/>}>Kontakt</Link>
-                        </li>
-                        <li>
-                            <Link to={'/'} element={<MyCoupling/>}>To jest SE</Link>
-                        </li>
-                    </ul>
+                    {/*<ul className={'submenu'}>*/}
+                    {/*    <li>*/}
+                    {/*        <Link to={'/'} element={<MyCoupling/>}>Kontakt</Link>*/}
+                    {/*    </li>*/}
+                    {/*    <li>*/}
+                    {/*        <Link to={'/'} element={<MyCoupling/>}>To jest SE</Link>*/}
+                    {/*    </li>*/}
+                    {/*</ul>*/}
                 </div>
             </div>
         </nav>

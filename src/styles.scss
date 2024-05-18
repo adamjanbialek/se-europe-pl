@@ -2,12 +2,6 @@
 @import "styles/globals/fonts";
 @import "styles/globals/typography";
 
-.section-contrains {
-  max-width: 1320px;
-  padding: 0 60px;
-  margin-inline: auto;
-}
-
 picture {
   display: block;
 
@@ -26,4 +20,32 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+}
+
+.section-contrains {
+  max-width: 1320px;
+  padding: 0 60px;
+  margin-inline: auto;
+}
+
+.heading-container {
+  text-align: center;
+}
+
+.tables-page {
+  margin: 150px auto;
+
+  h1 {
+    &.page-title {
+      color: #1d6cc1;
+    }
+  }
+
+  h1 + .paragraph {
+    margin-top: 25px;
+  }
+}
+
+.links-container {
+  margin-top: 75px;
 }
