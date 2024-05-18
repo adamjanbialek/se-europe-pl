@@ -7,6 +7,7 @@ import {HomePage} from "./pages/HomePage/HomePage";
 import {MyMachine} from "./pages/MyMachine/MyMachine";
 import {MyCoupling} from "./pages/MyCoupling/MyCoupling";
 import {createContext, useState} from "react";
+import {ThreePoint} from "./pages/ThreePoint/ThreePoint";
 
 export const Context = createContext();
 
@@ -22,6 +23,7 @@ function App() {
               <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/moje-zlacze" element={<MyCoupling />} />
+                  <Route path="/moje-zlacze/3-punkt" element={<ThreePoint />} />
                   <Route path="/moja-maszyna" element={<MyMachine />} />
               </Routes>
               <FooterComponent />
