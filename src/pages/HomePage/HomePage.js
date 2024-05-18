@@ -59,7 +59,7 @@ export const HomePage = () => {
                             <picture>
                                 <img src={excavator}/>
                             </picture>
-                            <p className={'vehicle-name link-title--smaller'}>KOPARKA</p>
+                            <p className={'vehicle-name link-title--smaller'}>KOPARA</p>
                         </Link>
                         <Link className={'vehicle-link'} to="">
                             <picture>
