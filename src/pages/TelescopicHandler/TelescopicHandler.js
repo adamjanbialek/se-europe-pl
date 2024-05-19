@@ -1,0 +1,35 @@
+import './TelescopicHandler.scss';
+
+import adapter from "../../assets/telescopic-handler/adapter.png";
+import zlacza from "../../assets/telescopic-handler/couplings.png";
+import zuraw from "../../assets/telescopic-handler/crane.png";
+import lyzka from "../../assets/telescopic-handler/grading.png";
+import pallet from "../../assets/telescopic-handler/pallet.png";
+import widly from "../../assets/telescopic-handler/pallet2.png";
+import krokodyl from "../../assets/telescopic-handler/silage.png";
+import lyzka2 from "../../assets/tractor/lyzka.png";
+import {LinksListWithImages} from "../../components/LinksListWithImages/LinksListWithImages";
+
+export const TelescopicHandler = () => {
+    const products = [
+        {name: 'Adapter', imgUrl: adapter},
+        {name: 'Złącza', imgUrl: zlacza},
+        {name: 'Żuraw', imgUrl: zuraw},
+        {name: 'Łyżka wyrównująca', imgUrl: lyzka},
+        {name: 'Pallet Fork Frame Hydraulic', imgUrl: pallet},
+        {name: 'Mechaniczne widły do palet', imgUrl: widly},
+        {name: 'Krokodyl', imgUrl: krokodyl},
+        {name: 'Łyżka uniwersalna', imgUrl: lyzka2},
+    ];
+
+    return (
+        <main className={'my-machine'}>
+            <section className={'section-contrains tables-page'}>
+                <div className={'heading-container'}>
+                    <h1 className={'page-title'}>Ładowarka teleskopowa</h1>
+                </div>
+                <LinksListWithImages data={products} />
+            </section>
+        </main>
+    );
+}

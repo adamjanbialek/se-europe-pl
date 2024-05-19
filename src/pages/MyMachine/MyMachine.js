@@ -11,7 +11,7 @@ export const MyMachine = () => {
     const products = [
         {name: '3 punkt', imgUrl: wheelLoader},
         {name: 'Atlas', imgUrl: excavator},
-        {name: 'Avant-Multioe', imgUrl: tractor},
+        {name: 'Avant-Multione', imgUrl: tractor},
         {name: 'Bobcat', imgUrl: telescopicHandler},
         {name: 'Cat 906', imgUrl: skidLoader},
         {name: 'Dieci', imgUrl: forkLift},
