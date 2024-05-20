@@ -34,17 +34,17 @@ export const Excavator = () => {
         {name: 'Digging bucket', imgUrl: digging},
         {name: 'Digging package', imgUrl: diggingPackage},
         {name: 'Isrivarblad', imgUrl: ''},
-        {name: 'Cable bucket', imgUrl: cable},
+        {name: 'Łyżka kablowa', imgUrl: cable},
         {name: 'Rake', imgUrl: rake},
         {name: 'Crane jib', imgUrl: crane},
-        {name: 'Leveller girder', imgUrl: leveller},
+        {name: 'Równiarka', imgUrl: leveller},
         {name: 'Łyżka wyrównująca', imgUrl: gradingBucket},
         {name: 'Frame', imgUrl: frame},
-        {name: 'Sweeper', imgUrl: sweeper},
+        {name: 'Zamiatarki', imgUrl: sweeper},
         {name: 'Hydraulic sweeper', imgUrl: hydraulic},
-        {name: 'Łyżka do kamieni', imgUrl: ripper},
-        {name: 'Hak do big bagów', imgUrl: cableDrum},
-        {name: 'WD Bucket', imgUrl: wdBucket},
+        {name: 'Kieł zrywający', imgUrl: ripper},
+        {name: 'Cable drum lifter', imgUrl: cableDrum},
+        {name: 'WD Łyżka kopiąca', imgUrl: wdBucket},
         {name: 'Złącza', imgUrl: coupling},
     ];
 
@@ -53,6 +53,18 @@ export const Excavator = () => {
             <section className={'section-contrains tables-page'}>
                 <div className={'heading-container'}>
                     <h1 className={'page-title'}>Koparka</h1>
+                    <p className={'paragraph paragraph--medium'}>
+                        Koparka to rodzaj maszyny budowlanej, która nadaje się do wielu różnych zadań, ale jest głównie przeznaczona do prac rozbiórkowych i wykopywania.
+                    </p>
+                        <br />
+                    <p className={'paragraph paragraph--medium'}>
+                        Możliwość montażu różnych urządzeń na mocowaniu osprzętu maszyny poszerza zakres zastosowania koparki.
+                        W SE Equipment oferujemy szeroką gamę sprzętu do koparek.
+                    </p>
+                        <br />
+                    <p className={'paragraph paragraph--medium'}>
+                        Kliknij na wybrany produkt poniżej, aby uzyskać więcej informacji.
+                    </p>
                 </div>
                 <LinksListWithImages data={products} />
             </section>

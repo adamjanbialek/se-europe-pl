@@ -62,6 +62,13 @@ export const WheelLoader = () => {
             <section className={'section-contrains tables-page'}>
                 <div className={'heading-container'}>
                     <h1 className={'page-title'}>Ładowarka kołowa</h1>
+                    <p className={'paragraph paragraph--medium'}>
+                        Oferujemy szeroką gamę sprzętu do ładowarek kołowych i miniładowarek.
+                    </p>
+                    <br />
+                    <p className={'paragraph paragraph--medium'}>
+                        Kliknij na wybrany produkt poniżej, aby uzyskać więcej informacji.
+                    </p>
                 </div>
                 <LinksListWithImages data={products} />
             </section>

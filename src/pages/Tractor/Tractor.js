@@ -31,6 +31,14 @@ export const Tractor = () => {
             <section className={'section-contrains tables-page'}>
                 <div className={'heading-container'}>
                     <h1 className={'page-title'}>Traktor</h1>
+                    <p className={'paragraph paragraph--medium'}>
+                        Tutaj znajdziesz pełną standardową gamę sprzętu SE Equipment do ciągników.
+                        Oferujemy szeroki wybór osprzętu, od łyżek po sprzęt do podnoszenia.
+                    </p>
+                    <br />
+                    <p className={'paragraph paragraph--medium'}>
+                        Kliknij na wybrany produkt poniżej, aby znaleźć odpowiednie narzędzie dla siebie.
+                    </p>
                 </div>
                 <LinksListWithImages data={products} />
             </section>

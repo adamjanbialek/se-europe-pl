@@ -12,6 +12,10 @@ import {Tractor} from "./pages/Tractor/Tractor";
 import {TelescopicHandler} from "./pages/TelescopicHandler/TelescopicHandler";
 import {WheelLoader} from "./pages/WheelLoader/WheelLoader";
 import {Excavator} from "./pages/Excavator/Excavator";
+import {Forklift} from "./pages/Forklift/Forklift";
+import {WithoutCoupling} from "./pages/WithoutCoupling/WithoutCoupling";
+import {Contact} from "./pages/Contact/Contact";
+import {ThisIsSe} from "./pages/ThisIsSe/ThisIsSe";
 
 export const Context = createContext();
 
@@ -33,6 +37,10 @@ function App() {
                   <Route path="/moja-maszyna/koparka" element={<Excavator />} />
                   <Route path="/moja-maszyna/traktor" element={<Tractor />} />
                   <Route path="/moja-maszyna/ladowarka-teleskopowa" element={<TelescopicHandler />} />
+                  <Route path="/moja-maszyna/wozek-widlowy" element={<Forklift />} />
+                  <Route path="/moja-maszyna/bez-zlacz" element={<WithoutCoupling />} />
+                  <Route path="/o-nas/kontakt" element={<Contact />} />
+                  <Route path="/o-nas/to-jest-se" element={<ThisIsSe />} />
               </Routes>
               <FooterComponent />
           </Router>

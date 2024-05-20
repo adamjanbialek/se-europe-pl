@@ -27,6 +27,14 @@ export const TelescopicHandler = () => {
             <section className={'section-contrains tables-page'}>
                 <div className={'heading-container'}>
                     <h1 className={'page-title'}>Ładowarka teleskopowa</h1>
+                    <p className={'paragraph paragraph--medium'}>
+                        Tutaj znajdziesz pełną standardową gamę sprzętu SE Equipment do ładowarek teleskopowych.
+                        Oferujemy szeroki wybór osprzętu, od łyżek po sprzęt do podnoszenia.
+                    </p>
+                    <br />
+                    <p className={'paragraph paragraph--medium'}>
+                        Kliknij na wybrany produkt poniżej, aby znaleźć odpowiedni sprzęt dla siebie.
+                    </p>
                 </div>
                 <LinksListWithImages data={products} />
             </section>
