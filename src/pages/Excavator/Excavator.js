@@ -44,7 +44,7 @@ export const Excavator = () => {
         {name: 'Hydraulic sweeper', imgUrl: hydraulic},
         {name: 'Łyżka do kamieni', imgUrl: ripper},
         {name: 'Hak do big bagów', imgUrl: cableDrum},
-        {name: 'Lumber grip', imgUrl: wdBucket},
+        {name: 'WD Bucket', imgUrl: wdBucket},
         {name: 'Złącza', imgUrl: coupling},
     ];
 
