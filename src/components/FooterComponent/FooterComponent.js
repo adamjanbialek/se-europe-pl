@@ -4,6 +4,9 @@ import headset from '../../assets/icons/headset.png';
 import clock from '../../assets/icons/clock.png';
 import home from '../../assets/icons/home.png';
 import bgShape from '../../assets/footer/footer-shape.png';
+import {Link} from "react-router-dom";
+import {NewCustomer} from "../../pages/NewCustomer/NewCustomer";
+import {MyAccount} from "../../pages/MyAccount/MyAccount";
 
 export const FooterComponent = () => {
     return (
@@ -45,12 +48,12 @@ export const FooterComponent = () => {
                     </picture>
                     <h3>POMOC</h3>
                     <div className={'subsection__content'}>
-                        <a>Nowy klient</a>
-                        <a>Jak zamawiać</a>
+                        <Link to={'/nowy-klient'} element={<NewCustomer />}>Nowy klient</Link>
+                        <Link to={'/jak-zamawiac'} element={<MyAccount />}>Jak zamawiać</Link>
                         <a>Jak szukać</a>
-                        <a>Moje konto</a>
+                        <Link to={'/moje-konto'} element={<MyAccount />}>Moje konto</Link>
                         <a>Dostawa</a>
-                        <a>Bezpieczeństwo & cookies</a>
+                        <Link to={'/bezpieczenstwo-cookies'} element={<NewCustomer />}>Bezpieczeństwo & cookies</Link>
                     </div>
                 </div>
             </div>
