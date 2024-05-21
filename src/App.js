@@ -16,6 +16,7 @@ import {Forklift} from "./pages/Forklift/Forklift";
 import {WithoutCoupling} from "./pages/WithoutCoupling/WithoutCoupling";
 import {Contact} from "./pages/Contact/Contact";
 import {ThisIsSe} from "./pages/ThisIsSe/ThisIsSe";
+// import {Sustainability} from "./pages/Sustainability/Sustainability";
 
 export const Context = createContext();
 
@@ -41,6 +42,7 @@ function App() {
                   <Route path="/moja-maszyna/bez-zlacz" element={<WithoutCoupling />} />
                   <Route path="/o-nas/kontakt" element={<Contact />} />
                   <Route path="/o-nas/to-jest-se" element={<ThisIsSe />} />
+                  <Route path="/o-nas/zrownowazony-rozwoj" element={<Sustainability />} />
               </Routes>
               <FooterComponent />
           </Router>
