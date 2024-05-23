@@ -43,7 +43,7 @@ export const HowToShop = () => {
                     </p>
                     <br />
                     <p className={'paragraph paragraph--medium'}>
-                        Następnym razem, gdy odwiedzisz sklep internetowy, po prostu przejdź do Mojego konta i umieść zapisaną listę ulubionych w koszyku.
+                        Następnym raze, gdy odwiedzisz sklep internetowy, po prostu przejdź do Mojego konta i umieść zapisaną listę ulubionych w koszyku.
                     </p>
                 </div>
             </section>
