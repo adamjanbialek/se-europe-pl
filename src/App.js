@@ -21,6 +21,9 @@ import {NewCustomer} from "./pages/NewCustomer/NewCustomer";
 import {SecurityCookies} from "./pages/SecurityCookies/SecurityCookies";
 import {MyAccount} from "./pages/MyAccount/MyAccount";
 import {HowToShop} from "./pages/HowToShop/HowToShop";
+import {HowToSearch} from "./pages/HowToSearch/HowToSearch";
+import {Delivery} from "./pages/Delivery/Delivery";
+import {FindReseller} from "./pages/FindReseller/FindReseller";
 
 export const Context = createContext(false);
 
@@ -52,10 +55,13 @@ function App() {
                       <Route path="kontakt" element={<Contact />} />
                       <Route path="to-jest-se" element={<ThisIsSe />} />
                       <Route path="zrownowazony-rozwoj" element={<Sustainability />} />
+                      <Route path="znajdz-posrednika" element={<FindReseller />} />
                   </Route>
                   <Route path="/nowy-klient" element={<NewCustomer />} />
                   <Route path="/jak-zamawiac" element={<HowToShop />} />
+                  <Route path="/jak-szukac" element={<HowToSearch />} />
                   <Route path="/bezpieczenstwo-cookies" element={<SecurityCookies />} />
+                  <Route path="/dostawa" element={<Delivery />} />
                   <Route path="/moje-konto" element={<MyAccount />} />
               </Routes>
               <FooterComponent />

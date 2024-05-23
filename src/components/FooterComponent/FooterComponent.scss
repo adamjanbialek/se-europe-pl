@@ -29,6 +29,12 @@ footer {
 
     a {
       display: block;
+      color: white;
+      transition: .2s all;
+
+      &:hover {
+        color: #1d6cc1;
+      }
     }
 
     a, p {

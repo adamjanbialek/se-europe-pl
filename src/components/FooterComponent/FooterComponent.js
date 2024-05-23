@@ -7,6 +7,10 @@ import bgShape from '../../assets/footer/footer-shape.png';
 import {Link} from "react-router-dom";
 import {NewCustomer} from "../../pages/NewCustomer/NewCustomer";
 import {MyAccount} from "../../pages/MyAccount/MyAccount";
+import {HowToSearch} from "../../pages/HowToSearch/HowToSearch";
+import {HowToShop} from "../../pages/HowToShop/HowToShop";
+import {SecurityCookies} from "../../pages/SecurityCookies/SecurityCookies";
+import {Delivery} from "../../pages/Delivery/Delivery";
 
 export const FooterComponent = () => {
     return (
@@ -29,7 +33,7 @@ export const FooterComponent = () => {
                     </div>
                     <div className={'subsection__content'}>
                         <p>Telefon: +48 22 487 84 13</p>
-                        <p>office-pl@se-europe.com</p>
+                        <Link to={'mailto:office-pl@se-europe.com'}>office-pl@se-europe.com</Link>
                     </div>
                 </div>
                 <div className={'subsection__container'}>
@@ -49,11 +53,11 @@ export const FooterComponent = () => {
                     <h3>POMOC</h3>
                     <div className={'subsection__content'}>
                         <Link to={'/nowy-klient'} element={<NewCustomer />}>Nowy klient</Link>
-                        <Link to={'/jak-zamawiac'} element={<MyAccount />}>Jak zamawiać</Link>
-                        <a>Jak szukać</a>
+                        <Link to={'/jak-zamawiac'} element={<HowToShop />}>Jak zamawiać</Link>
+                        <Link to={'/jak-szukac'} element={<HowToSearch />}>Jak szukać</Link>
                         <Link to={'/moje-konto'} element={<MyAccount />}>Moje konto</Link>
-                        <a>Dostawa</a>
-                        <Link to={'/bezpieczenstwo-cookies'} element={<NewCustomer />}>Bezpieczeństwo & cookies</Link>
+                        <Link to={'/dostawa'} element={<Delivery />}>Dostawa</Link>
+                        <Link to={'/bezpieczenstwo-cookies'} element={<SecurityCookies />}>Bezpieczeństwo & cookies</Link>
                     </div>
                 </div>
             </div>
