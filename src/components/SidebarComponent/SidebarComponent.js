@@ -8,6 +8,7 @@ import {MyMachine} from "../../pages/MyMachine/MyMachine";
 import {AboutUs} from "../../pages/AboutUs/AboutUs";
 import settings from '../../assets/icons/settings.png'
 import user from '../../assets/icons/user.png'
+import {Contact} from "../../pages/Contact/Contact";
 
 export const SidebarComponent = () => {
     const [toggleSidebar, setToggleSidebar] = useContext(Context);
@@ -39,7 +40,7 @@ export const SidebarComponent = () => {
             </div>
             <div className={'aside__line-container aside__line-container--column'}>
                 <Link to={'/'} element={<HomePage />}>Start</Link>
-                <Link to={'/'} >Kontakt</Link>
+                <Link to={'/o-nas/kontakt'} element={<Contact />}>Kontakt</Link>
             </div>
         </aside>
     );
