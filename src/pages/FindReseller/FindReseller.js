@@ -64,7 +64,7 @@ export const FindReseller = () => {
                             <label htmlFor={'message'}>Wiadomość:</label>
                             <textarea placeholder={'Wpisz wiadomość'} id={'message'}/>
                         </div>
-                        <input type="submit"/>
+
                     </form>
                 </div>
             </section>
