@@ -9,10 +9,10 @@ import hamburger from '../../assets/icons/hamburger.svg';
 import {Link} from "react-router-dom";
 import {MyCoupling} from "../../pages/MyCoupling/MyCoupling";
 import {AboutUs} from "../../pages/AboutUs/AboutUs";
-import {MyMachine} from "../../pages/MyMachine/MyMachine";
 import {HomePage} from "../../pages/HomePage/HomePage";
 import {useContext, useState} from "react";
 import {Context} from "../../App";
+import {DropdownMenu} from "../DropdownMenu/DropdownMenu";
 
 export const NavbarComponent = () => {
     const [toggleSidebar, setToggleSidebar] = useContext(Context);
@@ -62,21 +62,22 @@ export const NavbarComponent = () => {
                     <div className={'submenu__link-container'}>
                         <Link className={'submenu__title'} to={'/moje-zlacze'} element={<MyCoupling/>}>Moje złączę</Link>
                     </div>
-                    {/*<ul className={'submenu'}>*/}
-                    {/*    <li>*/}
-                    {/*        <Link to={'/'} element={<MyCoupling/>}>Atlas</Link>*/}
-                    {/*    </li>*/}
-                    {/*    <li>*/}
-                    {/*        <Link to={'/'} element={<MyCoupling/>}>Avant</Link>*/}
-                    {/*    </li>*/}
-                    {/*    <li>*/}
-                    {/*        <Link to={'/'} element={<MyCoupling/>}>Bobcat</Link>*/}
-                    {/*    </li>*/}
-                    {/*</ul>*/}
+                    <ul className={'submenu'}>
+                        <li>
+                            <Link to={'/'} element={<MyCoupling/>}>Atlas</Link>
+                        </li>
+                        <li>
+                            <Link to={'/'} element={<MyCoupling/>}>Avant</Link>
+                        </li>
+                        <li>
+                            <Link to={'/'} element={<MyCoupling/>}>Bobcat</Link>
+                        </li>
+                    </ul>
                 </div>
                 <div className={'submenu-container'}>
                     <div className={'submenu__link-container'}>
-                        <Link className={'submenu__title'} to={'/moja-maszyna'} element={<MyMachine/>}>Moja maszyna</Link>
+                        {/*<Link className={'submenu__title'} to={'/moja-maszyna'} element={<MyMachine/>}>Moja maszyna</Link>*/}
+                        <DropdownMenu />
                     </div>
                     {/*<ul className={'submenu'}>*/}
                     {/*    <li>*/}
