@@ -13,7 +13,7 @@ export const HowToShop = () => {
                         Istnieje kilka sposobów na znalezienie przedmiotu:
                     </p>
                     <br />
-                    <ul className={'paragraph paragraph--medium'}>
+                    <ul className={'paragraph paragraph--medium unordered-list'}>
                         <li>Do przeglądania elementów można używać drzewa nawigacji.</li>
                         <li>Jeśli znasz już wszystkie numery artykułów, możesz skorzystać z „łatwego zamówienia”, aby przyspieszyć proces składania zamówienia.</li>
                         <li>Skorzystaj z pola wyszukiwania. Więcej informacji na temat wyszukiwania znajdziesz w sekcji pomocy w sekcji „wskazówki dotyczące wyszukiwania”.

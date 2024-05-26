@@ -15,6 +15,12 @@
     align-items: center;
     justify-content: center;
 
+    .nav__menu-item:hover {
+      a:has(+ ul) {
+        background: #bbb;
+      }
+    }
+
     a {
       color: white;
       transition: .2s all;
@@ -25,7 +31,6 @@
       box-sizing: border-box;
 
       &:hover {
-        background: #bbb;
         cursor: pointer;
       }
     }
@@ -94,5 +99,113 @@
         transform: rotate(0);
       }
     }
+  }
+}
+
+.nav__submenu {
+  display: none;
+}
+
+.nav__menu-item:hover {
+  .nav__submenu {
+    display: block;
+  }
+}
+
+/*
+Layout styles.
+
+I like to work on stuff that's good looking so I remixed a cool simple menu by Mike Rojas (thanks!): https://codepen.io/mikerojas87/pen/rojKb
+*/
+
+$color-blue: #00aeef;
+$color-blue-dark: #0d2035;
+$submenu-width: 180px;
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.menu-container {
+  text-align: center;
+}
+
+.nav--bottom {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.nav--bottom {
+  height: fit-content;
+  width: 100%;
+  z-index: 999;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-align: left;
+
+  a {
+    display: block;
+    width: 100%;
+    padding: 0 16px;
+    line-height: inherit;
+    cursor: pointer;
+  }
+}
+
+.nav__menu {
+  line-height: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__menu-item {
+  display: inline-block;
+  width: 220px;
+  position: relative;
+
+  &:hover {
+    //background-color: $color-blue;
+
+    .nav__submenu {
+      display: block;
+    }
+  }
+}
+
+.nav__submenu {
+  font-weight: 300;
+  text-transform: none;
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: #1d6cc1;
+
+  li {
+    border-top: 1px solid white;
+  }
+}
+
+.nav__submenu-item {
+  &:hover {
+    background: rgba(#000, 0.1);
   }
 }

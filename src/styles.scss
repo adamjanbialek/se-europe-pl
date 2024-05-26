@@ -60,7 +60,8 @@ video {
   height: fit-content;
 }
 
-ul {
+.unordered-list {
+
   li {
     &:not(:first-of-type) {
       margin-top: 5px;

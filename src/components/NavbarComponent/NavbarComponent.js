@@ -7,15 +7,37 @@ import iconYt from '../../assets/icons/icon-youtube.png';
 import iconMail from '../../assets/icons/icon-mail.png';
 import hamburger from '../../assets/icons/hamburger.svg';
 import {Link} from "react-router-dom";
-import {MyCoupling} from "../../pages/MyCoupling/MyCoupling";
-import {AboutUs} from "../../pages/AboutUs/AboutUs";
 import {HomePage} from "../../pages/HomePage/HomePage";
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import {Context} from "../../App";
 import {DropdownMenu} from "../DropdownMenu/DropdownMenu";
+import {ThreePoint} from "../../pages/ThreePoint/ThreePoint";
+import {Excavator} from "../../pages/Excavator/Excavator";
+import {Tractor} from "../../pages/Tractor/Tractor";
+import {WheelLoader} from "../../pages/WheelLoader/WheelLoader";
+import {TelescopicHandler} from "../../pages/TelescopicHandler/TelescopicHandler";
+import {Forklift} from "../../pages/Forklift/Forklift";
+import {WithoutCoupling} from "../../pages/WithoutCoupling/WithoutCoupling";
+import {Contact} from "../../pages/Contact/Contact";
+import {ThisIsSe} from "../../pages/ThisIsSe/ThisIsSe";
+import {Sustainability} from "../../pages/Sustainability/Sustainability";
+import {FindReseller} from "../../pages/FindReseller/FindReseller";
 
 export const NavbarComponent = () => {
     const [toggleSidebar, setToggleSidebar] = useContext(Context);
+
+    const myCouplingSubmenu = [
+        {linkName: '3 punkt', url: '/moje-zlacze/3-punkt'},
+    ];
+
+
+
+    const aboutUsSubmenu = [
+        {linkName: 'Kontakt', url: '/o-nas/kontakt'},
+        {linkName: 'To jest se', url: '/o-nas/to-jest-se'},
+        {linkName: 'Zrównoważony rozwój', url: '/o-nas/zrownowazony-rozwoj'},
+        {linkName: 'Znajdź pośrednika', url: '/o-nas/znajdz-posrednika'},
+    ];
 
     return (
         <nav className={'nav'}>
@@ -58,52 +80,68 @@ export const NavbarComponent = () => {
                 </div>
             </div>
             <div className={'nav--bottom text-shadow'}>
-                <div className={'submenu-container'}>
-                    <div className={'submenu__link-container'}>
-                        <Link className={'submenu__title'} to={'/moje-zlacze'} element={<MyCoupling/>}>Moje złączę</Link>
-                    </div>
-                    <ul className={'submenu'}>
-                        <li>
-                            <Link to={'/'} element={<MyCoupling/>}>Atlas</Link>
+
+                    <ul className="nav__menu">
+                        <li className="nav__menu-item">
+                            <a>Moje złącze</a>
+                            <ul className="nav__submenu">
+                                <li className="nav__submenu-item ">
+                                    <Link to={'/moje-zlacze/3-punkt'} element={<ThreePoint />}>3 punkt</Link>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <Link to={'/'} element={<MyCoupling/>}>Avant</Link>
+                        <li
+                            className="nav__menu-item"
+                        >
+                            <a>Moja maszyna</a>
+                            {/*const myMachineSubmenu = [*/}
+                            {/*{linkName: 'Ładowarka kołowa', url: '/moja-maszyna/ladowarka-kolowa'},*/}
+                            {/*{linkName: 'Koparka', url: '/moja-maszyna/koparka'},*/}
+                            {/*{linkName: 'Traktor', url: '/moja-maszyna/traktor'},*/}
+                            {/*{linkName: 'Ładowarka teleskopowa', url: '/moja-maszyna/ladowarka-teleskopowa'},*/}
+                            {/*{linkName: 'Wózek widłowy', url: '/moja-maszyna/wozek-widlowy'},*/}
+                            {/*{linkName: 'Bez złącz', url: '/moja-maszyna/bez-zlacz'},*/}
+                            {/*];*/}
+                            <ul className="nav__submenu">
+                                <li className="nav__submenu-item ">
+                                    <Link to={'/moja-maszyna/ladowarka-kolowa'} element={<WheelLoader />}>Ładowarka kołowa</Link>
+                                </li>
+                                <li className="nav__submenu-item ">
+                                    <Link to={'/moja-maszyna/koparka'} element={<Excavator />}>Koparka</Link>
+                                </li>
+                                <li className="nav__submenu-item ">
+                                    <Link to={'/moja-maszyna/traktor'} element={<Tractor />}>Traktor</Link>
+                                </li>
+                                <li className="nav__submenu-item ">
+                                    <Link to={'/moja-maszyna/ladowarka-teleskopowa'} element={<TelescopicHandler />}>Ładowarka teleskopowa</Link>
+                                </li>
+                                <li className="nav__submenu-item ">
+                                    <Link to={'/moja-maszyna/wozek-widlowy'} element={<Forklift />}>Wózek widłowy</Link>
+                                </li>
+                                <li className="nav__submenu-item ">
+                                    <Link to={'/moja-maszyna/bez-zlacz'} element={<WithoutCoupling />}>Bez złącz</Link>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <Link to={'/'} element={<MyCoupling/>}>Bobcat</Link>
+                        <li className="nav__menu-item">
+                            <a>O nas</a>
+                            <ul className="nav__submenu">
+                                <li className="nav__submenu-item ">
+                                    <Link to={'/o-nas/kontakt'} element={<Contact />}>Kontakt</Link>
+                                </li>
+                                <li className="nav__submenu-item ">
+                                    <Link to={'/o-nas/to-jest-se'} element={<ThisIsSe />}>To jest SE</Link>
+                                </li>
+                                <li className="nav__submenu-item ">
+                                    <Link to={'/o-nas/zrownowazony-rozwoj'} element={<Sustainability />}>Zrównoważony rozwój</Link>
+                                </li>
+                                <li className="nav__submenu-item ">
+                                    <Link to={'/o-nas/znajdz-posrednika'} element={<FindReseller />}>Znajdź pośrednika</Link>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
-                </div>
-                <div className={'submenu-container'}>
-                    <div className={'submenu__link-container'}>
-                        {/*<Link className={'submenu__title'} to={'/moja-maszyna'} element={<MyMachine/>}>Moja maszyna</Link>*/}
-                        <DropdownMenu />
-                    </div>
-                    {/*<ul className={'submenu'}>*/}
-                    {/*    <li>*/}
-                    {/*        <Link to={'/'} element={<MyCoupling/>}>ŁADOWARKA KOŁOWA</Link>*/}
-                    {/*    </li>*/}
-                    {/*    <li>*/}
-                    {/*        <Link to={'/'} element={<MyCoupling/>}>Koparka</Link>*/}
-                    {/*    </li>*/}
-                    {/*    <li>*/}
-                    {/*        <Link to={'/'} element={<MyCoupling/>}>Traktor</Link>*/}
-                    {/*    </li>*/}
-                    {/*</ul>*/}
-                </div>
-                <div className={'submenu-container'}>
-                    <div className={'submenu__link-container'}>
-                        <Link className={'submenu__title'} to={'/o-nas'} element={<AboutUs/>}>O nas</Link>
-                    </div>
-                    {/*<ul className={'submenu'}>*/}
-                    {/*    <li>*/}
-                    {/*        <Link to={'/'} element={<MyCoupling/>}>Kontakt</Link>*/}
-                    {/*    </li>*/}
-                    {/*    <li>*/}
-                    {/*        <Link to={'/'} element={<MyCoupling/>}>To jest SE</Link>*/}
-                    {/*    </li>*/}
-                    {/*</ul>*/}
-                </div>
+
             </div>
         </nav>
     );
