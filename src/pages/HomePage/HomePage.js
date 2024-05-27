@@ -17,9 +17,9 @@ export const HomePage = () => {
                     <img src={vehiclePart}/>
                 </picture>
                 <div className={'section-contrains'}>
-                    <a className={'reseller'}>
+                    <Link to={'/o-nas/znajdz-posrednika'} className={'reseller'}>
                         Znajdź sprzedawcę
-                    </a>
+                    </Link>
                 </div>
             </section>
             <section className={'section-contrains place-order'}>

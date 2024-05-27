@@ -1,3 +1,4 @@
+@import "styles/abstracts/variables";
 @import "styles/globals/reset-styles";
 @import "styles/globals/fonts";
 @import "styles/globals/typography";
@@ -57,6 +58,7 @@ button {
 video {
   max-width: 800px;
   width: 100%;
+  height: fit-content;
 }
 
 .unordered-list {

@@ -1,16 +1,11 @@
 import '../../styles.scss';
 import './NavbarComponent.scss';
 import seLogo from '../../assets/logos/se-logo.png';
-import iconFb from '../../assets/icons/icon-facebook.png';
-import iconIg from '../../assets/icons/icon-instagram.png';
-import iconYt from '../../assets/icons/icon-youtube.png';
-import iconMail from '../../assets/icons/icon-mail.png';
 import hamburger from '../../assets/icons/hamburger.svg';
 import {Link} from "react-router-dom";
 import {HomePage} from "../../pages/HomePage/HomePage";
 import {useContext} from "react";
 import {Context} from "../../App";
-import {DropdownMenu} from "../DropdownMenu/DropdownMenu";
 import {ThreePoint} from "../../pages/ThreePoint/ThreePoint";
 import {Excavator} from "../../pages/Excavator/Excavator";
 import {Tractor} from "../../pages/Tractor/Tractor";
@@ -22,9 +17,30 @@ import {Contact} from "../../pages/Contact/Contact";
 import {ThisIsSe} from "../../pages/ThisIsSe/ThisIsSe";
 import {Sustainability} from "../../pages/Sustainability/Sustainability";
 import {FindReseller} from "../../pages/FindReseller/FindReseller";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 export const NavbarComponent = () => {
     const [toggleSidebar, setToggleSidebar] = useContext(Context);
+
+    let lastScrollTop = 0;
+
+    const toggleNavbar = () => {
+        let scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        console.log(scrollY);
+
+        const navBarContent = document.querySelector('.nav-bar__content');
+
+        scrollY > lastScrollTop ? navBarContent.classList.remove('visible')  : navBarContent.classList.add('visible');
+
+        lastScrollTop = scrollY <= 0 ? 0 : scrollY;
+    }
+
+    window.addEventListener("scroll", toggleNavbar);
 
     const myCouplingSubmenu = [
         {linkName: '3 punkt', url: '/moje-zlacze/3-punkt'},
@@ -40,46 +56,37 @@ export const NavbarComponent = () => {
     ];
 
     return (
-        <nav className={'nav'}>
-            <div className={'nav--top section-contrains'}>
-                <Link to={'/'} element={<HomePage />}>
-                    <picture className={'se-logo'}>
-                        <img src={seLogo} alt={'SE Europe logo'} />
-                    </picture>
-                </Link>
-                <div className={'icons-container'}>
-                    <div className={'socials'}>
-                        <Link className={'icon'} to={'https://www.facebook.com/SEEquipmentPolandSpzoo/'} target="_blank">
-                            <picture>
-                                <img src={iconFb} alt={'Facebook icon'} />
-                            </picture>
-                        </Link>
-                        <Link className={'icon'} to={'https://www.instagram.com/se_equipment_poland/'} target="_blank">
-                            <picture>
-                                <img src={iconIg} alt={'Instagram icon'} />
-                            </picture>
-                        </Link>
-                        <Link className={'icon'} to={'https://www.youtube.com/channel/UCyHY8EgVJ5y3sGhjkQuLAvQ'} target="_blank">
-                            <picture>
-                                <img src={iconYt} alt={'YouTube icon'} />
-                            </picture>
-                        </Link>
-                        <Link className={'icon'} to={'mailto:office-pl@se-europe.com'} target="_blank">
-                            <picture>
-                                <img src={iconMail} alt={'Email icon'} />
-                            </picture>
-                        </Link>
-                    </div>
-                    <div className={'sidebar-toggle'}>
-                        <button onClick={() => setToggleSidebar(!toggleSidebar)}>
-                            <picture className={'icon'}>
-                                <img src={hamburger} />
-                            </picture>
-                        </button>
+        <nav className={'nav '}>
+            <div className={'nav-bar__content visible'}>
+                <div className={'nav--top section-contrains'}>
+                    <Link to={'/'} element={<HomePage />}>
+                        <picture className={'se-logo'}>
+                            <img src={seLogo} alt={'SE Europe logo'} />
+                        </picture>
+                    </Link>
+                    <div className={'icons-container'}>
+                        <div className={'socials'}>
+                            <Link className={'icon'} to={'https://www.facebook.com/SEEquipmentPolandSpzoo/'} target="_blank">
+                                <FontAwesomeIcon icon={faFacebook} />
+                            </Link>
+                            <Link className={'icon'} to={'https://www.instagram.com/se_equipment_poland/'} target="_blank">
+                                <FontAwesomeIcon icon={faInstagram} />
+                            </Link>
+                            <Link className={'icon'} to={'https://www.youtube.com/channel/UCyHY8EgVJ5y3sGhjkQuLAvQ'} target="_blank">
+                                <FontAwesomeIcon icon={faYoutube} />
+                            </Link>
+                            <Link className={'icon'} to={'mailto:office-pl@se-europe.com'} target="_blank">
+                                <FontAwesomeIcon icon={faEnvelope} />
+                            </Link>
+                        </div>
+                        <div className={'sidebar-toggle'}>
+                            <button className={'icon'} onClick={() => setToggleSidebar(!toggleSidebar)}>
+                                <FontAwesomeIcon icon={faBars} />
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className={'nav--bottom text-shadow'}>
+                <div className={'nav--bottom text-shadow'}>
 
                     <ul className="nav__menu">
                         <li className="nav__menu-item">
@@ -141,7 +148,7 @@ export const NavbarComponent = () => {
                             </ul>
                         </li>
                     </ul>
-
+                </div>
             </div>
         </nav>
     );

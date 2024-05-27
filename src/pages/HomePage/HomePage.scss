@@ -13,6 +13,11 @@
     width: fit-content;
     height: fit-content;
     margin-bottom: 50px;
+    transition: .2s all;
+
+    &:hover {
+      background: black;
+    }
   }
 
   .section-contrains {
