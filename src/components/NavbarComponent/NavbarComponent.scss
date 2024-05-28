@@ -53,6 +53,23 @@
       }
     }
   }
+
+  .link-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav__menu-item {
+    &:hover {
+      .angle-up {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+
+  .angle-up {
+    transition: .2s all;
+  }
 }
 
 .icon {
@@ -83,6 +100,10 @@
 
 .se-logo {
   height: 65px;
+
+  @media (max-width: $small) {
+    height: 40px;
+  }
 }
 
 .icons-container {

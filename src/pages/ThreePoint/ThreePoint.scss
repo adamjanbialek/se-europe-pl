@@ -1,7 +1,13 @@
+@import '../../styles/abstracts/variables';
+
 .available-choices-container {
   display: flex;
   margin-top: 70px;
   gap: 40px;
+
+  @media (max-width: $medium) {
+    flex-direction: column;
+  }
 
   .choice-container {
     width: 100%;
@@ -13,6 +19,9 @@
       label {
         width: 50%;
         margin-inline: 0;
+        @media (max-width: $medium) {
+          width: 100%;
+        }
       }
     }
 

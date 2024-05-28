@@ -19,6 +19,7 @@ import {Sustainability} from "../../pages/Sustainability/Sustainability";
 import {FindReseller} from "../../pages/FindReseller/FindReseller";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -90,7 +91,10 @@ export const NavbarComponent = () => {
 
                     <ul className="nav__menu">
                         <li className="nav__menu-item">
-                            <a>Moje złącze</a>
+                            <a className={'link-container'}>
+                                Moje złącze
+                                <FontAwesomeIcon icon={faAngleUp} className={'angle-up'} />
+                            </a>
                             <ul className="nav__submenu">
                                 <li className="nav__submenu-item ">
                                     <Link to={'/moje-zlacze/3-punkt'} element={<ThreePoint />}>3 punkt</Link>
@@ -100,15 +104,10 @@ export const NavbarComponent = () => {
                         <li
                             className="nav__menu-item"
                         >
-                            <a>Moja maszyna</a>
-                            {/*const myMachineSubmenu = [*/}
-                            {/*{linkName: 'Ładowarka kołowa', url: '/moja-maszyna/ladowarka-kolowa'},*/}
-                            {/*{linkName: 'Koparka', url: '/moja-maszyna/koparka'},*/}
-                            {/*{linkName: 'Traktor', url: '/moja-maszyna/traktor'},*/}
-                            {/*{linkName: 'Ładowarka teleskopowa', url: '/moja-maszyna/ladowarka-teleskopowa'},*/}
-                            {/*{linkName: 'Wózek widłowy', url: '/moja-maszyna/wozek-widlowy'},*/}
-                            {/*{linkName: 'Bez złącz', url: '/moja-maszyna/bez-zlacz'},*/}
-                            {/*];*/}
+                            <a className={'link-container'}>
+                                Moja maszyna
+                                <FontAwesomeIcon icon={faAngleUp} className={'angle-up'} />
+                            </a>
                             <ul className="nav__submenu">
                                 <li className="nav__submenu-item ">
                                     <Link to={'/moja-maszyna/ladowarka-kolowa'} element={<WheelLoader />}>Ładowarka kołowa</Link>
@@ -131,7 +130,10 @@ export const NavbarComponent = () => {
                             </ul>
                         </li>
                         <li className="nav__menu-item">
-                            <a>O nas</a>
+                            <a className={'link-container'}>
+                                O nas
+                                <FontAwesomeIcon icon={faAngleUp} className={'angle-up'} />
+                            </a>
                             <ul className="nav__submenu">
                                 <li className="nav__submenu-item ">
                                     <Link to={'/o-nas/kontakt'} element={<Contact />}>Kontakt</Link>
