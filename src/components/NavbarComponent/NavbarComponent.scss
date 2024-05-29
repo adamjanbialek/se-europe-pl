@@ -34,7 +34,7 @@
     justify-content: center;
 
     .nav__menu-item:hover {
-      a:has(+ ul) {
+      a:has(+ .nav__submenu) {
         background: #bbb;
       }
     }
@@ -100,6 +100,16 @@
 
 .se-logo {
   height: 65px;
+
+  img {
+    transition: .3s all ease-in;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
 
   @media (max-width: $small) {
     height: 40px;
@@ -257,6 +267,49 @@ body {
 }
 
 .nav__submenu-item {
+  &--list {
+    position: relative;
+
+    &:hover {
+      a + ul {
+        width: 100%;
+        opacity: 1;
+      }
+
+      a {
+        .angle-up {
+          transform: rotate(90deg) !important;
+        }
+      }
+    }
+
+  a {
+    display: flex;
+    justify-content: space-between;
+  }
+
+    a + ul {
+      background-color: #1d6cc1;
+      transition: .2s opacity;
+      opacity: 0;
+      width: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 100%;
+
+      li:first-of-type {
+        border-top: unset;
+      }
+
+      a {
+        &:hover {
+          background-color: black;
+        }
+      }
+    }
+  }
+
   &:hover {
     background: black;
   }

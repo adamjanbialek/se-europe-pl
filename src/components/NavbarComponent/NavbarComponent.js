@@ -1,7 +1,6 @@
 import '../../styles.scss';
 import './NavbarComponent.scss';
 import seLogo from '../../assets/logos/se-logo.png';
-import hamburger from '../../assets/icons/hamburger.svg';
 import {Link} from "react-router-dom";
 import {HomePage} from "../../pages/HomePage/HomePage";
 import {useContext} from "react";
@@ -99,11 +98,23 @@ export const NavbarComponent = () => {
                                 <li className="nav__submenu-item ">
                                     <Link to={'/moje-zlacze/3-punkt'} element={<ThreePoint />}>3 punkt</Link>
                                 </li>
+                                <li className="nav__submenu-item nav__submenu-item--list">
+                                    <Link to={'/moje-zlacze/avant'} element={<ThreePoint />}>
+                                        Avant
+                                        <FontAwesomeIcon icon={faAngleUp} className={'angle-up'} />
+                                    </Link>
+                                    <ul>
+                                        <li>
+                                            <Link to={'/moje-zlacze/avant-200'} element={<ThreePoint />}>Avant 200</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={'/moje-zlacze/avant-multione'} element={<ThreePoint />}>Avant Multione</Link>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
-                        <li
-                            className="nav__menu-item"
-                        >
+                        <li className="nav__menu-item">
                             <a className={'link-container'}>
                                 Moja maszyna
                                 <FontAwesomeIcon icon={faAngleUp} className={'angle-up'} />

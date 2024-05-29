@@ -1,7 +1,7 @@
 @import '../../styles/abstracts/variables';
 
 aside {
-  position: absolute;
+  position: fixed;
   height: 100%;
   z-index: 1000;
   background: white;
@@ -44,6 +44,48 @@ aside {
         justify-content: center;
       }
 
+      &--accordion {
+        display: block;
+        box-shadow: none;
+        border-radius: unset !important;
+
+        .aside__line {
+          padding: unset;
+        }
+
+        .MuiAccordionSummary-root {
+          min-height: unset;
+        }
+
+        .MuiAccordionSummary-content {
+          margin: 0 !important;
+        }
+
+        .MuiButtonBase-root {
+          padding: 0;
+        }
+
+        .angle-up {
+          color: black;
+        }
+
+        &:hover {
+          .angle-up {
+            color: white;
+          }
+        }
+
+        .MuiAccordionDetails-root {
+          padding: 0;
+        }
+
+        &:hover {
+          a {
+            color: white;
+          }
+        }
+      }
+
       &:not(.aside__line--no-bg):hover {
         background-color: black;
         color: white;
@@ -55,6 +97,20 @@ aside {
       align-items: center;
       justify-content: space-between;
       //padding: 7px 0;
+
+      .nav__submenu-item {
+        box-sizing: border-box;
+        padding: 7px 20px;
+        a {
+          width: 100%;
+          display: block;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: lightgray;
+        }
+      }
 
       &:first-of-type {
         justify-content: center;
@@ -69,7 +125,7 @@ aside {
         color: black;
 
         &:not(:first-of-type) {
-          margin-top: 7px;
+          //margin-top: 7px;
         }
       }
 
