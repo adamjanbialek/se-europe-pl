@@ -5,21 +5,10 @@
   height: 442px;
   display: flex;
 
-  .reseller {
-    border-radius: 10px;
-    background: #1d6cc1;
-    padding: 15px;
+  .button--reseller {
     left: 0;
     bottom: 0;
-    color: white;
-    width: fit-content;
-    height: fit-content;
     margin-bottom: 50px;
-    transition: .2s all;
-
-    &:hover {
-      background: black;
-    }
   }
 
   .section-contrains {

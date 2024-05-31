@@ -23,6 +23,20 @@ button {
   cursor: pointer;
 }
 
+.button {
+  border-radius: 10px;
+  background: #1d6cc1;
+  padding: 15px;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  transition: .2s all;
+
+  &:hover {
+    background: black;
+  }
+}
+
 .section-contrains {
   max-width: 1320px;
   padding: 0 60px;
