@@ -31,7 +31,6 @@ export const NavbarComponent = () => {
 
     const toggleNavbar = () => {
         let scrollY = window.pageYOffset || document.documentElement.scrollTop;
-        console.log(scrollY);
 
         const navBarContent = document.querySelector('.nav-bar__content');
 

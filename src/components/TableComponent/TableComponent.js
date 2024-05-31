@@ -17,34 +17,33 @@ const rows = [
     createData('113542', 'SMS', 1184, 777, 2500),
 ];
 
-export const TableComponent = () => {
+export const TableComponent = (props) => {
+
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
-                        <TableCell>SKU</TableCell>
-                        <TableCell align="right">Złącze</TableCell>
-                        <TableCell align="right">Szerokość</TableCell>
-                        <TableCell align="right">Wysokość</TableCell>
-                        <TableCell align="right">Udźwig</TableCell>
+                        {Object.keys(props.data[0]).map(tableCell => {
+                            return (<TableCell >{tableCell}</TableCell>);
+                        })}
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {rows.map((row) => (
-                        <TableRow
-                            key={row.name}
-                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                        >
-                            <TableCell component="th" scope="row">
-                                {row.sku}
-                            </TableCell>
-                            <TableCell align="right">{row.coupling}</TableCell>
-                            <TableCell align="right">{row.width}</TableCell>
-                            <TableCell align="right">{row.height}</TableCell>
-                            <TableCell align="right">{row.capacity}</TableCell>
-                        </TableRow>
-                    ))}
+                    {props.data.filter(product=> {
+                        return product.weight >= props.displayedItems[0] & product.weight <= props.displayedItems[1]
+                    }).map(product => {
+                        const fields = Object.values(product);
+                        return (
+                            <TableRow
+                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                            >
+                                {fields.map(field => {
+                                    return <TableCell>{field}</TableCell>;
+                                })}
+                            </TableRow>
+                        )
+                    })}
                 </TableBody>
             </Table>
         </TableContainer>

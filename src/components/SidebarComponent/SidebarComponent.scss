@@ -11,6 +11,7 @@ aside {
   max-width: 350px;
   width: 100%;
   box-sizing: border-box;
+  box-shadow: 0 0 20px 20px rgba(0,0,0,.3);
   //padding: 30px 20px;
   @media (max-width: $medium) {
     max-width: 100%;
@@ -18,6 +19,7 @@ aside {
 
   &.aside-container--hidden {
     transform: translateX(100%);
+    box-shadow: none;
   }
 
   .btn--close {
@@ -40,14 +42,47 @@ aside {
       box-sizing: border-box;
       padding: 7px 20px;
 
+      &:hover {
+        * {
+          background-color: unset !important;
+        }
+      }
+
+      a:hover {
+        color: #1d6cc1 !important;
+      }
+
+      &__line {
+        background-color: black !important;
+      }
+
       &--no-bg {
         justify-content: center;
+      }
+
+      &--narrow {
+        width: fit-content !important;
+        position: relative;
+        z-index: 2;
+
+        &:hover {
+          color: #1d6cc1 !important;
+        }
+      }
+
+      &:hover {
+        color: #1d6cc1;
+
+        .aside__line--accordion {
+          background-color: black !important;
+        }
       }
 
       &--accordion {
         display: block;
         box-shadow: none;
         border-radius: unset !important;
+        margin: 0 !important;
 
         .aside__line {
           padding: unset;
@@ -88,7 +123,7 @@ aside {
 
       &:not(.aside__line--no-bg):hover {
         background-color: black;
-        color: white;
+        //color: white;
       }
     }
 
@@ -108,7 +143,7 @@ aside {
 
         &:hover {
           cursor: pointer;
-          background-color: lightgray;
+          //background-color: lightgray;
         }
       }
 
@@ -117,7 +152,7 @@ aside {
 
         .btn {
           position: absolute;
-          left: 20px;
+          right: 20px;
         }
       }
 
@@ -137,6 +172,12 @@ aside {
       &:not(:first-of-type) {
         border-top: 1px solid rgba(170,170,170,.35);
       }
+    }
+  }
+
+  ul {
+    .nav__submenu-item {
+      padding-right: 0 !important;
     }
   }
 

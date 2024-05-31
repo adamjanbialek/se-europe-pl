@@ -26,6 +26,7 @@ import {Delivery} from "./pages/Delivery/Delivery";
 import {FindReseller} from "./pages/FindReseller/FindReseller";
 
 export const Context = createContext(false);
+export const ProductContext = createContext(false);
 
 function App() {
     const [toggleSidebar, setToggleSidebar] = useState(false);

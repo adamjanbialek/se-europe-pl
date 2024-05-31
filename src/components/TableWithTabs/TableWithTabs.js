@@ -7,7 +7,7 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import {TableComponent} from "../TableComponent/TableComponent";
 
-export const TableWithTabs = () => {
+export const TableWithTabs = (props) => {
     const [value, setValue] = React.useState('1');
 
     const handleChange = (event, newValue) => {
@@ -24,8 +24,9 @@ export const TableWithTabs = () => {
                         <Tab label="1184mm" value="3" />
                     </TabList>
                 </Box>
+
                 <TabPanel value="1">
-                    <TableComponent/>
+                    <TableComponent data={props.productsData.tableData} displayedItems={props.displayedItems}/>
                 </TabPanel>
                 <TabPanel value="2">Table Two</TabPanel>
                 <TabPanel value="3">Table Three</TabPanel>
