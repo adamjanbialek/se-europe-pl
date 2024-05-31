@@ -71,9 +71,7 @@ export const SidebarComponent = () => {
                                             <li className="nav__submenu-item ">
                                                 <Link to={''}>Atlas 35</Link>
                                             </li>
-                                            <li className="nav__submenu-item ">
-                                                <Link to={''}>Atlas 65</Link>
-                                            </li>
+
                                             <li className="nav__submenu-item ">
                                                 <Link to={''} >Atlas 95</Link>
                                             </li>
