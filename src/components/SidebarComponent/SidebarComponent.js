@@ -174,11 +174,7 @@ export const SidebarComponent = () => {
                             <label htmlFor={'password'}>Hasło*:</label>
                         </div>
                         <div className={'aside__line'}>
-                            <input
-                                type="text"
-                                id={'password'}
-                                placeholder={'Wpisz hasło'}
-                            />
+                            <input required={true} type="text" id={'password'} placeholder={'Wpisz hasło'}/>
                         </div>
                         <div className={'aside__line'}>
                             <input type="submit"/>
