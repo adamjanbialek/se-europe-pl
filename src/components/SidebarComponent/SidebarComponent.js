@@ -1,5 +1,5 @@
 import './SidebarComponent.scss'
-import {useContext} from "react";
+import {useContext, useState} from "react";
 import {Context} from "../../App";
 import {Link} from "react-router-dom";
 import {HomePage} from "../../pages/HomePage/HomePage";
@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCircleXmark} from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
-import { faGear } from '@fortawesome/free-solid-svg-icons';
+// import { faGear } from '@fortawesome/free-solid-svg-icons';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -20,10 +20,15 @@ import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
 export const SidebarComponent = () => {
     const [toggleSidebar, setToggleSidebar] = useContext(Context);
+    const [sidebarFunctionality, setSidebarFunctionality] = useState(false);
+
+    function toggleFunctionality(value) {
+        setSidebarFunctionality(value);
+    }
 
     return (
         <aside className={`${!toggleSidebar ? 'aside-container--hidden' : ''}`}>
-            <div className={'aside__subcontainer'}>
+            <div className={`aside__subcontainer ${sidebarFunctionality ? 'aside__subcontainer--hidden' : ''}`}>
                 <div className={'aside__line-container'}>
                     <div className={'aside__line aside__line--no-bg'}>
                         <h2 className={'section-subtitle'}>
@@ -32,18 +37,18 @@ export const SidebarComponent = () => {
                         <FontAwesomeIcon className={'btn btn--close'} icon={faCircleXmark} onClick={() => {setToggleSidebar(false)}}/>
                     </div>
                 </div>
-                <div className={'aside__line-container'}>
-                    <div className={'aside__line'}>
+                <div className={`aside__line-container`}>
+                    <div className={'aside__line'} onClick={() => toggleFunctionality(true)}>
                         <FontAwesomeIcon className={'sidebar-icon'} icon={faUser} />
-                        <p>Sign in</p>
+                        <p>Logowanie</p>
                     </div>
                 </div>
-                <div className={'aside__line-container'}>
-                    <div className={'aside__line'}>
-                        <FontAwesomeIcon className={'sidebar-icon'} icon={faGear} />
-                        <p>Settings</p>
-                    </div>
-                </div>
+                {/*<div className={'aside__line-container'} onClick={() => toggleFunctionality({signIn: false, setting: true})}>*/}
+                {/*    <div className={'aside__line'}>*/}
+                {/*        <FontAwesomeIcon className={'sidebar-icon'} icon={faGear} />*/}
+                {/*        <p>Settings</p>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
                 <div className={'aside__line-container aside__line-container--column'}>
 
                     <Accordion className={'aside__line aside__line--accordion'}>
@@ -138,7 +143,7 @@ export const SidebarComponent = () => {
                                     <Link to={'/o-nas/zrownowazony-rozwoj'} >Zrównoważony rozwój</Link>
                                 </li>
                                 <li className="nav__submenu-item ">
-                                    <Link to={'/o-nas/znajdz-posrednika'} >Znajdź pośrednik</Link>
+                                    <Link to={'/o-nas/znajdz-posrednika'} >Znajdź pośrednika</Link>
                                 </li>
                             </ul>
 
@@ -151,13 +156,13 @@ export const SidebarComponent = () => {
                     <Link className={'aside__line'} to={'/o-nas/kontakt'} element={<Contact />}>Kontakt</Link>
                 </div>
             </div>
-            <div className={'aside__subcontainer aside__subcontainer--hidden'}>
+            <div className={`aside__subcontainer ${sidebarFunctionality ? '' : 'aside__subcontainer--hidden'}`}>
                 <div className={'aside__line-container'}>
                     <div className={'aside__line aside__line--no-bg'}>
                         <h2 className={'section-subtitle'}>
                             Logowanie
                         </h2>
-                        <FontAwesomeIcon className={'btn btn--close'} icon={faCircleXmark} onClick={() => {setToggleSidebar(false)}}/>
+                        <FontAwesomeIcon className={'btn btn--close'} icon={faCircleXmark} onClick={() => toggleFunctionality(false)}/>
                     </div>
                 </div>
                 <form className={'form'}>

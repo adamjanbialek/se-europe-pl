@@ -19,7 +19,6 @@ export const SliderRangeComponent = (props) => {
     const handleChange = (event, newValue) => {
         setValue(newValue);
         props.setDiplayedItems(value);
-        console.log(value);
     };
 
     return (

@@ -26,7 +26,7 @@ export const TableWithTabs = (props) => {
                 </Box>
 
                 <TabPanel value="1">
-                    <TableComponent data={props.productsData.tableData} displayedItems={props.displayedItems}/>
+                    <TableComponent data={props.productsData.tableData} displayedItems={props.displayedItems} checkboxes={props.checkboxes}/>
                 </TabPanel>
                 <TabPanel value="2">Table Two</TabPanel>
                 <TabPanel value="3">Table Three</TabPanel>

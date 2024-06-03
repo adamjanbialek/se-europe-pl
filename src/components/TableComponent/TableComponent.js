@@ -8,16 +8,15 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-function createData(sku, coupling, width, height, capacity) {
-    return { sku, coupling, width, height, capacity };
-}
-
-const rows = [
-    createData('114406', 'Big BM', 1070, 740, 2500),
-    createData('113542', 'SMS', 1184, 777, 2500),
-];
 
 export const TableComponent = (props) => {
+
+    function isChecked(product) {
+        if(Object.entries(props.checkboxes).filter(checkbox => checkbox[1] === true).length === 0 ||
+            Object.entries(props.checkboxes).filter(checkbox => checkbox[1] === true).map(checkbox => checkbox[0]).includes(product.coupling)) {
+            return product;
+        }
+    }
 
     return (
         <TableContainer component={Paper}>
@@ -32,7 +31,7 @@ export const TableComponent = (props) => {
                 <TableBody>
                     {props.data.filter(product=> {
                         return product.weight >= props.displayedItems[0] & product.weight <= props.displayedItems[1]
-                    }).map(product => {
+                    }).filter(product => isChecked(product)).map(product => {
                         const fields = Object.values(product);
                         return (
                             <TableRow
