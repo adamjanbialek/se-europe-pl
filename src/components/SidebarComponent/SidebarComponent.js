@@ -138,7 +138,7 @@ export const SidebarComponent = () => {
                                     <Link to={'/o-nas/zrownowazony-rozwoj'} >Zrównoważony rozwój</Link>
                                 </li>
                                 <li className="nav__submenu-item ">
-                                    <Link to={'/o-nas/znajdz-posrednika'} >Znajdź pośrednika</Link>
+                                    <Link to={'/o-nas/znajdz-posrednika'} >Znajdź pośrednik</Link>
                                 </li>
                             </ul>
 
