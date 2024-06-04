@@ -19,17 +19,21 @@ export const TableWithTabs = (props) => {
             <TabContext value={value}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                     <TabList onChange={handleChange} aria-label="lab API tabs example">
-                        <Tab label="1135mm" value="1" />
-                        <Tab label="1165mm" value="2" />
-                        <Tab label="1184mm" value="3" />
+                        { Object.keys(props.productsData.tableData).map((name, i) => {
+                            return (
+                                <Tab label={name} value={`${i+1}`} key={i} />
+                            )
+                        })}
                     </TabList>
                 </Box>
 
-                <TabPanel value="1">
-                    <TableComponent data={props.productsData.tableData} displayedItems={props.displayedItems} checkboxes={props.checkboxes}/>
-                </TabPanel>
-                <TabPanel value="2">Table Two</TabPanel>
-                <TabPanel value="3">Table Three</TabPanel>
+                { Object.values(props.productsData.tableData).map((table, i) => {
+                    return (
+                        <TabPanel value={`${i+1}`}>
+                            <TableComponent data={table} displayedItems={props.displayedItems} checkboxes={props.checkboxes}/>
+                        </TabPanel>
+                    )
+                })}
             </TabContext>
         </Box>
     );

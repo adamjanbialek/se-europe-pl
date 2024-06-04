@@ -24,6 +24,8 @@ import {HowToShop} from "./pages/HowToShop/HowToShop";
 import {HowToSearch} from "./pages/HowToSearch/HowToSearch";
 import {Delivery} from "./pages/Delivery/Delivery";
 import {FindReseller} from "./pages/FindReseller/FindReseller";
+import {MyPage} from "./pages/MyPage/MyPage";
+import {MyDetails} from "./pages/MyDetails/MyDetails";
 
 export const Context = createContext(false);
 export const ProductContext = createContext(false);
@@ -57,6 +59,10 @@ function App() {
                       <Route path="to-jest-se" element={<ThisIsSe />} />
                       <Route path="zrownowazony-rozwoj" element={<Sustainability />} />
                       <Route path="znajdz-posrednika" element={<FindReseller />} />
+                  </Route>
+                  <Route path="/moje-konto">
+                      <Route path="moja-strona" element={<MyPage />} />
+                      <Route path="moje-dane" element={<MyDetails />} />
                   </Route>
                   <Route path="/nowy-klient" element={<NewCustomer />} />
                   <Route path="/jak-zamawiac" element={<HowToShop />} />

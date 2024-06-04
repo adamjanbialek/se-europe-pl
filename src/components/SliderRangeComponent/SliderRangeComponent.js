@@ -10,7 +10,7 @@ function valuetext(value) {
 
 export const SliderRangeComponent = (props) => {
 
-    const maximumWeight = props.productsData.tableData
+    const maximumWeight = Object.values(props.productsData.tableData).flat()
         .reduce((acc, product) => acc?.weight > product.weight ? acc : product, {})
         .weight + 1;
 

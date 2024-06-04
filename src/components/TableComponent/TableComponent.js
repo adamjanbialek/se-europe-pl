@@ -29,10 +29,14 @@ export const TableComponent = (props) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
+                {/*    .filter(product=> {*/}
+                {/*    return product.weight >= props.displayedItems[0] & product.weight <= props.displayedItems[1]*/}
+                {/*}).filter(product => isChecked(product))*/}
                     {props.data.filter(product=> {
                         return product.weight >= props.displayedItems[0] & product.weight <= props.displayedItems[1]
                     }).filter(product => isChecked(product)).map(product => {
                         const fields = Object.values(product);
+                        console.log(fields)
                         return (
                             <TableRow
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

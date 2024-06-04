@@ -8,6 +8,7 @@ import telescopicHandler from '../../assets/home/telescopic-handler.png';
 import skidLoader from '../../assets/home/skid-loader.png';
 import forkLift from '../../assets/home/fork-lift.png';
 import {Link} from "react-router-dom";
+import {InstaFeed} from "../../components/InstaFeed/InstaFeed";
 
 export const HomePage = () => {
     return (
@@ -87,6 +88,9 @@ export const HomePage = () => {
                         </Link>
                     </div>
                 </div>
+            </section>
+            <section className={'section-contrains insta-section'}>
+                <InstaFeed  url="https://www.instagram.com/se_equipment_poland/?utm_source=ig_embed&ig_rid=78605f56-027c-4390-a0bb-02966f08eda5"/>
             </section>
             <section className={'section-contrains'}>
                 <div className={'end-of-page'}></div>
