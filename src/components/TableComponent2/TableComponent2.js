@@ -1,4 +1,3 @@
-import './TableComponent.scss';
 import * as React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -7,11 +6,14 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import {BoxWithCheckboxes} from "../BoxWithCheckboxes/BoxWithCheckboxes";
+import {useEffect, useState} from "react";
 
 
-export const TableComponent = (props) => {
+export const TableComponent2 = (props) => {
 
     function isChecked(product) {
+        console.log(props.checkboxes)
         if(Object.entries(props.checkboxes).filter(checkbox => checkbox[1] === true).length === 0 ||
             Object.entries(props.checkboxes).filter(checkbox => checkbox[1] === true).map(checkbox => checkbox[0]).includes(product.coupling)) {
             return product;
@@ -29,11 +31,8 @@ export const TableComponent = (props) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {props.data.filter(product=> {
-                        return product.weight >= props.displayedItems[0] & product.weight <= props.displayedItems[1]
-                    }).filter(product => isChecked(product)).map(product => {
+                    {props.data.filter(product => isChecked(product)).map(product => {
                         const fields = Object.values(product);
-                        console.log(fields)
                         return (
                             <TableRow
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

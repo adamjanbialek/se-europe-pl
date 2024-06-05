@@ -26,12 +26,39 @@ import {Delivery} from "./pages/Delivery/Delivery";
 import {FindReseller} from "./pages/FindReseller/FindReseller";
 import {MyPage} from "./pages/MyPage/MyPage";
 import {MyDetails} from "./pages/MyDetails/MyDetails";
+import {OrderOverview} from "./pages/OrderOverview/OrderOverview";
+import {InvoiceOverview} from "./pages/InvoiceOverview/InvoiceOverview";
 
 export const Context = createContext(false);
 export const ProductContext = createContext(false);
 
+export const AuthContext = createContext(null);
+
 function App() {
     const [toggleSidebar, setToggleSidebar] = useState(false);
+
+    const [ user, setUser ] = useState({name: "", isAuthenticated: false})
+
+    const login = (userName, password) => {
+
+        // Make a call to the authentication API to check the username
+
+        return new Promise((resolve, reject) => {
+
+            if (password === "password") {
+                setUser({name: userName, isAuthenticated: true})
+                resolve("success")
+            } else {
+                reject("Incorrect password")
+            }
+        })
+
+
+    }
+    const logout = () => {
+
+        setUser({...user, isAuthenticated: false})
+    }
 
   return (
     <div className="App">
@@ -60,10 +87,14 @@ function App() {
                       <Route path="zrownowazony-rozwoj" element={<Sustainability />} />
                       <Route path="znajdz-posrednika" element={<FindReseller />} />
                   </Route>
-                  <Route path="/moje-konto">
-                      <Route path="moja-strona" element={<MyPage />} />
-                      <Route path="moje-dane" element={<MyDetails />} />
-                  </Route>
+                  {/*<AuthContext.Provider value={{user, login, logout}}>*/}
+                      <Route path="/moje-konto">
+                          <Route path="moja-strona" element={<MyPage />} />
+                          <Route path="moje-dane" element={<MyDetails />} />
+                          <Route path="przeglad-zamowien" element={<OrderOverview />} />
+                          <Route path="przeglad-faktur" element={<InvoiceOverview />} />
+                      </Route>
+                  {/*</AuthContext.Provider>*/}
                   <Route path="/nowy-klient" element={<NewCustomer />} />
                   <Route path="/jak-zamawiac" element={<HowToShop />} />
                   <Route path="/jak-szukac" element={<HowToSearch />} />

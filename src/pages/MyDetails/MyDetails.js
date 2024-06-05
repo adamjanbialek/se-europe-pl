@@ -12,7 +12,7 @@ export const MyDetails = () => {
                     <br />
                     <p className={'paragraph paragraph--medium'}>
                         Ogłoszenie!
-                        Nie zapomnj zapisać zmian, klikając przycisk Zapisz na dole strony!
+                        Nie zapomnij zapisać zmian, klikając przycisk Zapisz na dole strony!
                         Czy chcesz dokonać zmian w danych nie ujętych w tym formularzu?
 
                     </p>
