@@ -63,7 +63,7 @@ function App() {
   return (
     <div className="App">
       <Context.Provider value={[toggleSidebar, setToggleSidebar]}>
-          <Router>
+          <Router basename="/se-europe-pl">
               <NavbarComponent />
               <SidebarComponent />
               <Routes>
