@@ -13,7 +13,6 @@ import {useEffect, useState} from "react";
 export const TableComponent2 = (props) => {
 
     function isChecked(product) {
-        console.log(props.checkboxes)
         if(Object.entries(props.checkboxes).filter(checkbox => checkbox[1] === true).length === 0 ||
             Object.entries(props.checkboxes).filter(checkbox => checkbox[1] === true).map(checkbox => checkbox[0]).includes(product.coupling)) {
             return product;

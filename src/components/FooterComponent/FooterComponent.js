@@ -52,12 +52,12 @@ export const FooterComponent = () => {
                     </picture>
                     <h3>POMOC</h3>
                     <div className={'subsection__content'}>
-                        <Link to={'/nowy-klient'} element={<NewCustomer />}>Nowy klient</Link>
-                        <Link to={'/jak-zamawiac'} element={<HowToShop />}>Jak zamawiać</Link>
-                        <Link to={'/jak-szukac'} element={<HowToSearch />}>Jak szukać</Link>
-                        <Link to={'/moje-konto'} element={<MyAccount />}>Moje konto</Link>
-                        <Link to={'/dostawa'} element={<Delivery />}>Dostawa</Link>
-                        <Link to={'/bezpieczenstwo-cookies'} element={<SecurityCookies />}>Bezpieczeństwo & cookies</Link>
+                        <Link to={'/pomoc-nowy-klient'} element={<NewCustomer />}>Nowy klient</Link>
+                        <Link to={'/pomoc-jak-zamawiac'} element={<HowToShop />}>Jak zamawiać</Link>
+                        <Link to={'/pomoc-jak-szukac'} element={<HowToSearch />}>Jak szukać</Link>
+                        <Link to={'/pomoc-moje-konto'} element={<MyAccount />}>Moje konto</Link>
+                        <Link to={'/pomoc-dostawa'} element={<Delivery />}>Dostawa</Link>
+                        <Link to={'/pomoc-bezpieczenstwo-cookies'} element={<SecurityCookies />}>Bezpieczeństwo & cookies</Link>
                     </div>
                 </div>
             </div>

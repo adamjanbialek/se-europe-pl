@@ -59,7 +59,6 @@ export const OrderOverview = () => {
     useEffect(() => {
         const uniqueCheckboxes = findCheckboxes();
         setCheckboxes(uniqueCheckboxes);
-        console.log(uniqueCheckboxes)
     }, [productsData.tableData]);
 
 
@@ -80,7 +79,6 @@ export const OrderOverview = () => {
                         })}
                     </div>
                     { Object.values(productsData.tableData).map((table, i) => {
-                        console.log(table)
                         return (
 
                                 <TableComponent2 data={table} checkboxes={checkboxes} />

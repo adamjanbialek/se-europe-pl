@@ -4,7 +4,7 @@ export const MyDetails = () => {
             <section className={'section-contrains tables-page'}>
                 <div className={'heading-container left-orientation'}>
 
-                    <h1 className={'page-title'}>ZMIEŃ MOJE DANE</h1>
+                    <h1 className={'page-title'}>ZMIEŃ SWOJE DANE</h1>
                     <br />
                     <p className={'paragraph paragraph--medium'}>
                         Wypełnij pola, które chcesz zmodyfikować.

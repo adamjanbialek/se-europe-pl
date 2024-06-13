@@ -1,6 +1,6 @@
 import './SidebarComponent.scss'
 import {useContext, useState} from "react";
-import {Context} from "../../App";
+import {AuthContext, Context} from "../../App";
 import {Link} from "react-router-dom";
 import {HomePage} from "../../pages/HomePage/HomePage";
 import {MyCoupling} from "../../pages/MyCoupling/MyCoupling";
@@ -20,7 +20,13 @@ import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
 export const SidebarComponent = () => {
     const [toggleSidebar, setToggleSidebar] = useContext(Context);
+    const [ user, setUser ] = useContext(AuthContext);
     const [sidebarFunctionality, setSidebarFunctionality] = useState(false);
+
+    function onAuthSet() {
+        setUser({name: "User1", isAuthenticated: true});
+        console.log(`${user.name}: ${user.isAuthenticated}`);
+    }
 
     function toggleFunctionality(value) {
         setSidebarFunctionality(value);
@@ -152,7 +158,8 @@ export const SidebarComponent = () => {
 
                 </div>
                 <div className={'aside__line-container aside__line-container--column'}>
-                    <Link className={'aside__line'} to={'/'} element={<HomePage />}>Start</Link>
+                    <Link className={'aside__line'} to={'/'} >Start</Link>
+                    <Link className={'aside__line'} to={'/moje-konto/moja-strona'} >Moje konto</Link>
                     <Link className={'aside__line'} to={'/o-nas/kontakt'} element={<Contact />}>Kontakt</Link>
                 </div>
             </div>
@@ -181,7 +188,7 @@ export const SidebarComponent = () => {
                             </div>
                             <input required={true} type="text" id={'password'} placeholder={'Wpisz hasło'}/>
                         </div>
-                        <button className={'button button--login'} type="submit">Zaloguj</button>
+                        <button className={'button button--login'} type="submit" onClick={() => onAuthSet()}>Zaloguj</button>
                     </div>
                 </form>
             </div>
