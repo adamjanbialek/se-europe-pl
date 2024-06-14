@@ -7,6 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import {Link} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
@@ -51,9 +52,10 @@ export const TableComponent = (props) => {
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             ><button className='buy-btn btn-container'>BUY</button>
                             <FontAwesomeIcon icon={faHeart} className={'like favourite-container'} onClick={onToggleFav} />
-                                {fields.map(field => {
-                                    return <TableCell>{field}</TableCell>;
+                                {fields.map((field, index) => {
+                                    return index === 0 ? <TableCell><Link to={`../${field}`}>{field}</Link></TableCell> : <TableCell>{field}</TableCell>;
                                 })}
+                                 {/* {fields.map(field => console.log(Object.entries(field)))} */}
                             </TableRow>
                         )
                     })}

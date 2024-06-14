@@ -74,7 +74,7 @@ function App() {
                   <Route path="/" element={<HomePage />} />
                   <Route path="/moje-zlacze">
                       <Route index  element={<MyCoupling />} />
-                      <Route path="se" element={<Se/>} />
+                      <Route path="100838" element={<Se/>} />
                       <Route path="3-punkt" element={<ThreePoint />} />
                   </Route>
                   <Route path="/moja-maszyna">
