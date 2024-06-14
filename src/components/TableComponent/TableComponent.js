@@ -7,6 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -19,15 +20,21 @@ export const TableComponent = (props) => {
         }
     }
 
-    function onToggleFav() {}
+    function onToggleFav(event) {
+        if(event.target.style.color === '') {
+            event.target.style.color = 'red'
+        } else {
+            event.target.style.color = ''
+        }
+    }
 
     return (
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
-                    <TableCell ></TableCell>
-                    <TableCell ></TableCell>
+                        <div className={'btn-container'} />
+                        <div className={'favourite-container'} />
                         {Object.keys(props.data[0]).map(tableCell => {
                             return (<TableCell >{tableCell}</TableCell>);
                         })}
@@ -42,8 +49,8 @@ export const TableComponent = (props) => {
                         return (
                             <TableRow
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                            ><button className='buy-btn'>BUY</button>
-                            <FontAwesomeIcon icon={faHeart} />
+                            ><button className='buy-btn btn-container'>BUY</button>
+                            <FontAwesomeIcon icon={faHeart} className={'like favourite-container'} onClick={onToggleFav} />
                                 {fields.map(field => {
                                     return <TableCell>{field}</TableCell>;
                                 })}

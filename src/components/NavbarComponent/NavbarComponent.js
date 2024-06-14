@@ -1,6 +1,7 @@
 import '../../styles.scss';
 import './NavbarComponent.scss';
 import seLogo from '../../assets/logos/se-logo.png';
+import poland from '../../assets/icons/poland.png';
 import {Link} from "react-router-dom";
 import {HomePage} from "../../pages/HomePage/HomePage";
 import {useContext} from "react";
@@ -64,6 +65,11 @@ export const NavbarComponent = () => {
                         </picture>
                     </Link>
                     <div className={'icons-container'}>
+                        <div>
+                            <Link className={'icon'} target="_blank">
+                                <img src={poland} className={'langs'}/>
+                            </Link>
+                        </div>
                         <div className={'socials'}>
                             <Link className={'icon'} to={'https://www.facebook.com/SEEquipmentPolandSpzoo/'} target="_blank">
                                 <FontAwesomeIcon icon={faFacebook} />

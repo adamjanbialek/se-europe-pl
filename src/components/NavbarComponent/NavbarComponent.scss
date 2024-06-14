@@ -6,6 +6,12 @@
     height: 80px;
   }
 
+  .langs {
+    border-radius: 50%;
+    height: 32px;
+    border: 2px solid black;
+  }
+
   &-bar__content {
     box-shadow: 0 2px 15px 8px rgba(17, 17, 17, .25);
     top: -100%;
