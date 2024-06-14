@@ -33,3 +33,32 @@
     }
   }
 }
+
+.MuiTabPanel-root {
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+button.MuiButtonBase-root {
+  background-color: #aaa !important;
+  border-right: 1px solid white !important;
+  color: white !important;
+  border-radius: 10px 10px 0px 0px;
+  height: 37px;
+
+  &:hover {
+    background-color: #72a2d5 !important;
+  }
+}
+
+button.Mui-selected {
+  background-color: #1d6cc1 !important;
+  &:hover {
+    background-color: #1d6cc1 !important;
+  }
+}
+
+thead tr th {
+  padding: 5px !important;
+  font-size: 400 !important;
+}
