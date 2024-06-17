@@ -70,7 +70,7 @@ function App() {
             <Router>
               <NavbarComponent />
               <SidebarComponent />
-              <Routes>
+              <Routes basename="/se-europe-pl">
                   <Route path="/" element={<HomePage />} />
                   <Route path="/moje-zlacze">
                       <Route index  element={<MyCoupling />} />
