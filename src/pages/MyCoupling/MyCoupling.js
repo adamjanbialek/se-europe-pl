@@ -20,6 +20,20 @@ import bigBm from "../../assets/couplings/bigBM.png";
 import terex from "../../assets/couplings/terex.png";
 import weidemann from "../../assets/couplings/weidemann.png";
 import {LinksListWithImages} from "../../components/LinksListWithImages/LinksListWithImages";
+import { useLoaderData } from 'react-router-dom';
+
+// export default function LoadedProducts() {
+//     const dbProducts = useLoaderData();
+//     console.log(dbProducts);
+
+//     return (
+//         <div>
+//             {dbProducts.map(product => (
+//                 <p>{product.name}</p>
+//             ))}
+//         </div>
+//     );
+// }
 
 export const MyCoupling = () => {
     const products = [
@@ -55,6 +69,8 @@ export const MyCoupling = () => {
         {name: 'Alo', imgUrl: ''},
     ];
 
+    
+
     return (
         <main className={'my-machine'}>
             <section className={'section-contrains tables-page'}>
@@ -66,4 +82,11 @@ export const MyCoupling = () => {
             </section>
         </main>
     );
+}
+
+export const productsLoader = async () => {
+
+    const res = await fetch('http://localhost:4000/products');
+
+    return await res.json();
 }

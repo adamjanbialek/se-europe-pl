@@ -64,6 +64,7 @@
   .link-container {
     display: flex;
     justify-content: space-between;
+    text-transform: capitalize;
   }
 
   .nav__menu-item {
@@ -235,11 +236,19 @@ body {
     padding: 0 16px;
     line-height: inherit;
     cursor: pointer;
+
+    &:not(.link-container):hover {
+      color: black;
+    }
+
+    svg {
+      color: black;
+    }
   }
 }
 
 .nav__menu {
-  line-height: 45px;
+  line-height: 40px;
   font-weight: 700;
   text-transform: uppercase;
   display: flex;
@@ -266,7 +275,7 @@ body {
   display: none;
   position: absolute;
   width: 100%;
-  background-color: #1d6cc1;
+  background: #aaaaaa;
 
   li {
     border-top: 1px solid white;
@@ -296,7 +305,7 @@ body {
   }
 
     a + ul {
-      background-color: #1d6cc1;
+      background: #aaaaaa;
       transition: .2s opacity;
       opacity: 0;
       width: 0;
@@ -311,13 +320,15 @@ body {
 
       a {
         &:hover {
-          background-color: black;
+          background: #bbb;
+          color: black;
         }
       }
     }
   }
 
   &:hover {
-    background: black;
+    background: #bbb;
+    color: black;
   }
 }

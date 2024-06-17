@@ -18,7 +18,7 @@ import {ThisIsSe} from "../../pages/ThisIsSe/ThisIsSe";
 import {Sustainability} from "../../pages/Sustainability/Sustainability";
 import {FindReseller} from "../../pages/FindReseller/FindReseller";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -58,7 +58,7 @@ export const NavbarComponent = () => {
     return (
         <nav className={'nav '}>
             <div className={'nav-bar__content visible'}>
-                <div className={'nav--top section-contrains'}>
+                <div className={'nav--top'}>
                     <Link to={'/'} element={<HomePage />}>
                         <picture className={'se-logo'}>
                             <img src={seLogo} alt={'SE Europe logo'} />
@@ -97,7 +97,7 @@ export const NavbarComponent = () => {
                         <li className="nav__menu-item">
                             <a className={'link-container'}>
                                 Moje złącze
-                                <FontAwesomeIcon icon={faAngleUp} className={'angle-up'} />
+                                <FontAwesomeIcon icon={faAngleDown} className={'angle-up'} />
                             </a>
                             <ul className="nav__submenu">
                                 <li className="nav__submenu-item ">
@@ -122,7 +122,7 @@ export const NavbarComponent = () => {
                         <li className="nav__menu-item">
                             <a className={'link-container'}>
                                 Moja maszyna
-                                <FontAwesomeIcon icon={faAngleUp} className={'angle-up'} />
+                                <FontAwesomeIcon icon={faAngleDown} className={'angle-up'} />
                             </a>
                             <ul className="nav__submenu">
                                 <li className="nav__submenu-item ">
@@ -148,7 +148,7 @@ export const NavbarComponent = () => {
                         <li className="nav__menu-item">
                             <a className={'link-container'}>
                                 O nas
-                                <FontAwesomeIcon icon={faAngleUp} className={'angle-up'} />
+                                <FontAwesomeIcon icon={faAngleDown} className={'angle-up'} />
                             </a>
                             <ul className="nav__submenu">
                                 <li className="nav__submenu-item ">

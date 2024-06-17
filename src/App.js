@@ -5,7 +5,7 @@ import {SidebarComponent} from "./components/SidebarComponent/SidebarComponent";
 import {FooterComponent} from "./components/FooterComponent/FooterComponent";
 import {HomePage} from "./pages/HomePage/HomePage";
 import {MyMachine} from "./pages/MyMachine/MyMachine";
-import {MyCoupling} from "./pages/MyCoupling/MyCoupling";
+import {MyCoupling, productsLoader} from "./pages/MyCoupling/MyCoupling";
 import {createContext, useState} from "react";
 import {ThreePoint} from "./pages/ThreePoint/ThreePoint";
 import {Tractor} from "./pages/Tractor/Tractor";
@@ -73,8 +73,9 @@ function App() {
               <Routes basename="/se-europe-pl">
                   <Route path="/" element={<HomePage />} />
                   <Route path="/moje-zlacze">
-                      <Route index  element={<MyCoupling />} />
+                      <Route index  element={<MyCoupling />} loader={productsLoader}/>
                       <Route path="100838" element={<Se/>} />
+                      <Route path=":product" element={<Se/>} />
                       <Route path="3-punkt" element={<ThreePoint />} />
                   </Route>
                   <Route path="/moja-maszyna">

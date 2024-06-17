@@ -2,8 +2,11 @@ import { useState } from 'react';
 import sketch from '../../assets/100838.png';
 import { ThreePoint } from '../ThreePoint/ThreePoint';
 import './Se.scss';
+import { useParams } from 'react-router-dom';
 
 export const Se = () => {
+
+    const { product } = useParams();
 
     const [itemsToOrder, setItemsToOrder] = useState(1);
 
@@ -16,6 +19,7 @@ export const Se = () => {
     return (
         <main className='product-page'>
             <ThreePoint></ThreePoint>
+            <h2>{product}</h2>
             <section className={'section-contrains tables-page item-page'}>
                 <div>
                     <h1>ADAPTER 3-PUNKTOWY DO SMS/EURO MECH</h1>
