@@ -18,7 +18,8 @@ import {ThisIsSe} from "../../pages/ThisIsSe/ThisIsSe";
 import {Sustainability} from "../../pages/Sustainability/Sustainability";
 import {FindReseller} from "../../pages/FindReseller/FindReseller";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -74,13 +75,13 @@ export const NavbarComponent = () => {
                             <Link className={'icon'} to={'https://www.facebook.com/SEEquipmentPolandSpzoo/'} target="_blank">
                                 <FontAwesomeIcon icon={faFacebook} />
                             </Link>
-                            <Link className={'icon'} to={'https://www.instagram.com/se_equipment_poland/'} target="_blank">
+                            <Link className={'icon icon--container'} to={'https://www.instagram.com/se_equipment_poland/'} target="_blank">
                                 <FontAwesomeIcon icon={faInstagram} />
                             </Link>
-                            <Link className={'icon'} to={'https://www.youtube.com/channel/UCyHY8EgVJ5y3sGhjkQuLAvQ'} target="_blank">
+                            <Link className={'icon icon--container'} to={'https://www.youtube.com/channel/UCyHY8EgVJ5y3sGhjkQuLAvQ'} target="_blank">
                                 <FontAwesomeIcon icon={faYoutube} />
                             </Link>
-                            <Link className={'icon'} to={'mailto:office-pl@se-europe.com'} target="_blank">
+                            <Link className={'icon icon--container'} to={'mailto:office-pl@se-europe.com'} target="_blank">
                                 <FontAwesomeIcon icon={faEnvelope} />
                             </Link>
                         </div>
@@ -97,7 +98,7 @@ export const NavbarComponent = () => {
                         <li className="nav__menu-item">
                             <a className={'link-container'}>
                                 Moje złącze
-                                <FontAwesomeIcon icon={faAngleDown} className={'angle-up'} />
+                                <FontAwesomeIcon icon={faAngleDown} className={'angle-up angle-up--main'} />
                             </a>
                             <ul className="nav__submenu">
                                 <li className="nav__submenu-item ">
@@ -122,7 +123,7 @@ export const NavbarComponent = () => {
                         <li className="nav__menu-item">
                             <a className={'link-container'}>
                                 Moja maszyna
-                                <FontAwesomeIcon icon={faAngleDown} className={'angle-up'} />
+                                <FontAwesomeIcon icon={faAngleDown} className={'angle-up angle-up--main'} />
                             </a>
                             <ul className="nav__submenu">
                                 <li className="nav__submenu-item ">
@@ -148,7 +149,7 @@ export const NavbarComponent = () => {
                         <li className="nav__menu-item">
                             <a className={'link-container'}>
                                 O nas
-                                <FontAwesomeIcon icon={faAngleDown} className={'angle-up'} />
+                                <FontAwesomeIcon icon={faAngleDown} className={'angle-up angle-up--main'} />
                             </a>
                             <ul className="nav__submenu">
                                 <li className="nav__submenu-item ">

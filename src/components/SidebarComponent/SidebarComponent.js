@@ -8,9 +8,10 @@ import {MyMachine} from "../../pages/MyMachine/MyMachine";
 import {AboutUs} from "../../pages/AboutUs/AboutUs";
 import {Contact} from "../../pages/Contact/Contact";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faCircleXmark} from '@fortawesome/free-solid-svg-icons';
+import {faXmark} from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 // import { faGear } from '@fortawesome/free-solid-svg-icons';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -37,10 +38,10 @@ export const SidebarComponent = () => {
             <div className={`aside__subcontainer ${sidebarFunctionality ? 'aside__subcontainer--hidden' : ''}`}>
                 <div className={'aside__line-container'}>
                     <div className={'aside__line aside__line--no-bg'}>
-                        <h2 className={'section-subtitle'}>
+                        <h2 className={'sidebar-title'}>
                             Menu
                         </h2>
-                        <FontAwesomeIcon className={'btn btn--close'} icon={faCircleXmark} onClick={() => {setToggleSidebar(false)}}/>
+                        <FontAwesomeIcon className={'btn btn--close'} icon={faXmark} onClick={() => {setToggleSidebar(false)}}/>
                     </div>
                 </div>
                 <div className={`aside__line-container`}>
@@ -166,31 +167,31 @@ export const SidebarComponent = () => {
             <div className={`aside__subcontainer ${sidebarFunctionality ? '' : 'aside__subcontainer--hidden'}`}>
                 <div className={'aside__line-container'}>
                     <div className={'aside__line aside__line--no-bg'}>
-                        <h2 className={'section-subtitle'}>
+                        <h2 className={'sidebar-title'}>
                             Logowanie
                         </h2>
-                        <FontAwesomeIcon className={'btn btn--close'} icon={faCircleXmark} onClick={() => toggleFunctionality(false)}/>
+                        <FontAwesomeIcon className={'btn btn--close'} icon={faArrowLeft} onClick={() => toggleFunctionality(false)}/>
                     </div>
                 </div>
+                <div className='aside__line-container'>
                 <form className={'form'}>
                     <div className={'aside__line-container'}>
                         <div className={'aside__line'}>
                             <div>
-                                <FontAwesomeIcon className={'sidebar-icon'} icon={faUser} />
-                                <label htmlFor={'login'}>Login*:</label>
+                                <label htmlFor={'login'}>Login *</label>
                             </div>
                             <input required={true} type="text" id={'login'} placeholder={'Wpisz login'}/>
                         </div>
                         <div className={'aside__line'}>
                             <div>
-                                <FontAwesomeIcon className={'sidebar-icon'} icon={faLock} />
-                                <label htmlFor={'password'}>Hasło*:</label>
+                                <label htmlFor={'password'}>Hasło *</label>
                             </div>
                             <input required={true} type="text" id={'password'} placeholder={'Wpisz hasło'}/>
                         </div>
                         <button className={'button button--login'} type="submit" onClick={() => onAuthSet()}>Zaloguj</button>
                     </div>
                 </form>
+                </div>
             </div>
         </aside>
     );
