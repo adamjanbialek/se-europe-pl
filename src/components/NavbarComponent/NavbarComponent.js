@@ -106,7 +106,7 @@ export const NavbarComponent = () => {
                                 <li className="nav__submenu-item nav__submenu-item--list">
                                     <Link to={'/moje-zlacze/avant'} element={<ThreePoint />}>
                                         Avant
-                                        <FontAwesomeIcon icon={faAngleUp} className={'angle-up'} />
+                                        <FontAwesomeIcon icon={faAngleDown} className={'angle-up'} />
                                     </Link>
                                     <ul>
                                         <li>

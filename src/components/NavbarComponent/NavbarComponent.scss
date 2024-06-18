@@ -1,7 +1,7 @@
 @import '../../styles/abstracts/variables';
 
 .nav {
-  height: 125px;
+  height: 120px;
   @media (max-width: $medium) {
     height: 80px;
   }
@@ -30,6 +30,7 @@
     justify-content: space-between;
     height: 80px;
     align-items: center;
+    padding-inline: 20px;
   }
 
   &--bottom {
@@ -64,12 +65,13 @@
     display: flex;
     justify-content: space-between;
     text-transform: capitalize;
+    font-weight: 400;
   }
 
   .nav__menu-item {
     &:hover {
       .angle-up {
-        transform: rotateX(180deg);
+        transform: rotate(-90deg);
       }
     }
   }
@@ -277,7 +279,7 @@ body {
   background: #aaaaaa;
 
   li {
-    border-top: 1px solid white;
+    border-top: 1px solid #aaa;
   }
 }
 
@@ -293,7 +295,7 @@ body {
 
       a {
         .angle-up {
-          transform: rotate(90deg) !important;
+          //transform: rotate(180deg) !important;
         }
       }
     }

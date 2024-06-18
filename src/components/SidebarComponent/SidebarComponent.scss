@@ -59,7 +59,7 @@ aside {
       }
 
       a:hover {
-        color: #1d6cc1 !important;
+        color: rgba(170,170,170,.75) !important;
       }
 
       &__line {
@@ -81,7 +81,7 @@ aside {
       }
 
       &:hover {
-        color: #1d6cc1;
+        color: rgba(170, 170, 170, 0.75) !important;
 
         // .aside__line--accordion {
         //   background-color: black !important;
@@ -116,7 +116,7 @@ aside {
 
         &:hover {
           .angle-up {
-            color: white;
+            color: rgba(170, 170, 170, 0.75) !important;
           }
         }
 
@@ -126,7 +126,7 @@ aside {
 
         &:hover {
           a {
-            color: white;
+            //color: white;
           }
         }
       }
