@@ -5,8 +5,8 @@ import {TableWithTabs} from "../../components/TableWithTabs/TableWithTabs";
 import {useState, useEffect} from "react";
 
 const productsData = {
-    name: '3 POINT',
-    description: 'We deliver and stock equipment for tractors.',
+    name: '3 punkt',
+    description: 'Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.',
     couplings: [],
     tableData: {
         adapter: [

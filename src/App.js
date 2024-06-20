@@ -30,6 +30,8 @@ import {OrderOverview} from "./pages/OrderOverview/OrderOverview";
 import {InvoiceOverview} from "./pages/InvoiceOverview/InvoiceOverview";
 import {Se} from "./pages/Se/Se";
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
+import { Coupling } from './components/Coupling/Coupling';
+import jsonProduct from './data/products.json';
 
 export const Context = createContext(false);
 export const ProductContext = createContext(false);
@@ -63,6 +65,10 @@ function App() {
     //     setUser({...user, isAuthenticated: false})
     // }
 
+    let products = JSON.parse(JSON.stringify(jsonProduct, null, 2));
+    console.log(products);
+    {products.map(el => Array.isArray(el) ? '' : console.log(el) )}
+
   return (
     <div className="App">
       <Context.Provider value={[toggleSidebar, setToggleSidebar]}>
@@ -75,7 +81,7 @@ function App() {
                   <Route path="/moje-zlacze">
                       <Route index  element={<MyCoupling />} loader={productsLoader}/>
                       {/* <Route path="100838" element={<Se/>} /> */}
-                      <Route path=":product" element={<Se/>} />
+                      <Route path=":product" element={<Coupling/>} />
                       <Route path="3-punkt" element={<ThreePoint />} />
                   </Route>
                   <Route path="/moja-maszyna">

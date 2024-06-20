@@ -1,30 +1,131 @@
-{
-    "products": [
+[
+    {
+        "name": "3 punkt",
+        "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
+        "couplings": [],
+        "tableData": {
+            "adapter": [
+                {
+                    "artNo": 100838,
+                    "coupling": "3 punkt",
+                    "width": 1134,
+                    "height": 781,
+                    "capacity": 2500,
+                    "machineSide": "3punkt",
+                    "equipmentSide": "SMS/Euro",
+                    "weight": 87
+                },
+                {
+                    "artNo": 100839,
+                    "coupling": "3 punkt",
+                    "width": 1165,
+                    "height": 850,
+                    "capacity": 5000,
+                    "machineSide": "3punkt",
+                    "equipmentSide": "Stora BM",
+                    "weight": 121
+                },
+                {
+                    "artNo": 113542,
+                    "coupling": "Big BM / 3 punkt",
+                    "width": 1184,
+                    "height": 492,
+                    "capacity": 2500,
+                    "machineSide": "Big BM/3 punkt",
+                    "equipmentSide": "SMS/Euro",
+                    "weight": 134
+                }
+            ],
+            "stengrep": [
+                {
+                    "artNo": 113224,
+                    "coupling": "3 punkt",
+                    "width": 2000,
+                    "height": 600,
+                    "depth": 1000,
+                    "horn": 35,
+                    "bump": "JA",
+                    "weight": 335
+                }
+            ]
+        }
+    },
+    [
         {
-            "id": 100838,
-            "name": "ADAPTER 3-PUNKTOWY DO SMS/EURO MECH",
-            "heading": "Mechaniczny uchwyt widłowy do traktora" ,
-            "subtitle": "Z adapterem od SE Equipment oszczędzasz zarówno czas, jak i pieniądze.",
-            "description": "SE Equipment oferuje proste rozwiązanie, które sprawi, że Twoja praca będzie bardziej efektywna. Dzięki naszemu adapterowi z mocowaniem 3-punktowym kat 2 po stronie maszyny i SMS/Euro po stronie osprzętu, masz możliwość zamontowania jednego osprzętu z innym złączem niż to, do którego maszyna jest przystosowana. Z naszym adapterem nie musisz ponosić dodatkowych kosztów związanych z zakupem nowego sprzętu lub nowej maszyny. Prezentujemy nasze adaptery w dużej różnorodności i w wielu różnych kombinacjach, ale wszystkie są produkowane z solidną ramą, aby wytrzymać cięższe obciążenia. Jeśli masz zadanie, w którym często musisz przełączać się między różnymi urządzeniami, nasz adapter jest optymalnym rozwiązaniem.",
-            "advantages": ["Proste rozwiązanie dla bardziej efektywnej pracy","Uniknięcie zakupu nowej maszyny lub sprzętu","Wiele różnych modeli"],
-            "video": null,
-            "videoDesc": null, 
-            "technical": {"Dane Techniczne": {"Udźwig": "2500 kg","Szerokość": "1134 mm","Wysokość": "781 mm","Waga": "87 kg","Mocowanie": "3 punktowe","Strona maszyny": "3 punktowe Kat 2","Strona osprzętu": "SMS/Euro","Produkt": "Adapter"}},
-            "photoUrl": "https://se-europe.com/images/prod500/3punkt_SMS_euro_adapter_traktor.png",
-            "photoDesc": "Trzypunktowy zaczep kategorii 2 do systemu SMS/Euro"
+            "name": "Atlas 35",
+            "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
+            "couplings": [],
+            "tableData": {
+                "ram": [
+                    {
+                        "artNo": 100997,
+                        "coupling": "Atlas 35",
+                        "width": 1200,
+                        "capacity": 1500,
+                        "weight": 50
+                    }
+                ],
+                "redskapsfaste": [
+                    {
+                        "artNo": 101281,
+                        "coupling": "Atlas 35",
+                        "weight": 8
+                    }
+                ]
+            }
         },
         {
-            "id": 500093,
-            "name": "ISME Uchwyt Widłowy Mechaniczny 2,5 Tony 1200/1200 mm",
-            "heading": "Mechaniczny uchwyt widłowy do traktora" ,
-            "subtitle": "Magazynowane mechaniczne uchwyty widłowe z naciskiem na bezpieczeństwo i jakość.",
-            "description": "Poniższy mechaniczny uchwyt widłowy ISME od SE Equipment charakteryzuje się przemyślaną konstrukcją. Uchwyt posiada zintegrowane mocowania narzędzi, które zapewniają operatorowi optymalną widoczność z kabiny traktora. Aby zapobiec zsunięciu się widelca, pod środkową częścią dolnej belki znajduje się śruba blokująca. Rama jest wyposażona w spawane płyty zapobiegające zsunięciu się widelca na boki. Montaż wideł odbywa się od środkowej części belki, co ułatwia instalację. Widły są przesuwane ręcznie poprzez podniesienie blokady na górnej części widelca, przesunięcie ich do żądanej pozycji i zablokowanie za pomocą blokady. W celu ułatwienia wymiany wideł, nasze uchwyty widłowe są skonstruowane zgodnie z europejską normą (model FEM). SE Equipment magazynuje solidne mechaniczne uchwyty widłowe do najbardziej zróżnicowanych zadań, które spełniają dzisiejsze wysokie wymagania dotyczące bezpieczeństwa i jakości. Konstrukcja uchwytu zapewnia operatorowi optymalną widoczność z miejsca pracy.",
-            "advantages": ["Optymalna widoczność","Spawane płyty zapobiegające zsunięciu się wideł","Montaż od środkowej części belki","Śruba blokująca w belce","Wiele wariantów","Skupienie na bezpieczeństwie i jakości"],
-            "video": null,
-            "videoDesc": "SMS 1200mm Uchwyty Widłowe", 
-            "technical": {"Dane Techniczne": {"Pojemność": "2500 kg", "Szerokość": "1200 mm", "Weight": "158 kg", "Mocowanie": "ISME", "Wymiary wideł": "100 x 40 x 1200 mm", "W zestawie": "Widły", "Uwagi": "Dane techniczne produktu zostały zmienione"}},
-            "photoUrl": "https://se-europe.com/images/prod1000/SMS_mekaniskt_gaffelst%C3%A4ll_fram_2500kg_fram.png",
-            "photoDesc": "Obrazek przedstawia: SMS 2,5 tony 1200 mm"
+            "name": "Atlas 65",
+            "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
+            "couplings": [],
+            "tableData": {
+                "adapter": [
+                    {
+                        "artNo": 112475,
+                        "coupling": "atlas 65",
+                        "width": 1165,
+                        "height": 850,
+                        "capacity": 5000,
+                        "machineSide": "atlas 65",
+                        "equipmentSide": "Big BM",
+                        "weight": 134
+                    },
+                    {
+                        "artNo": 112476,
+                        "coupling": "atlas 65",
+                        "width": 1184,
+                        "height": 492,
+                        "capacity": 2500,
+                        "machineSide": "atlas 65",
+                        "equipmentSide": "SMS/Euro",
+                        "weight": 79
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Atlas 95",
+            "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
+            "couplings": [],
+            "tableData": {
+                "ram": [
+                    {
+                        "artNo": 100999,
+                        "coupling": "atlas 95",
+                        "width": 1200,
+                        "capacity": 5000,
+                        "weight": 108
+                    }
+                ],
+                "redskapsfaste": [
+                    {
+                        "artNo": 101287,
+                        "coupling": "atlas 95",
+                        "weight": 20
+                    }
+                ]
+            }
         }
     ]
-}
+]
+
