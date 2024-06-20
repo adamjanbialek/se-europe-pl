@@ -32,3 +32,12 @@ input, textarea {
 .message-input {
   height: 200px;
 }
+
+.informational {
+  padding: 15px;
+  background: rgba(170, 170, 170, .2);
+
+  .fa-circle-info {
+    margin-right: 12px;
+  }
+}

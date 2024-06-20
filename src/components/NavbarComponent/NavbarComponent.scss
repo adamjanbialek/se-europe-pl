@@ -66,6 +66,7 @@
     justify-content: space-between;
     text-transform: capitalize;
     font-weight: 400;
+    line-height: 1.5em;
   }
 
   .nav__menu-item {
@@ -127,6 +128,7 @@
 
   img {
     transition: .3s all ease-in;
+    object-fit: contain;
   }
 
   &:hover {
@@ -143,15 +145,15 @@
 .icons-container {
   display: flex;
   gap: 50px;
+
+  @media (max-width: $smallMedium) {
+    gap:17px;
+  }
 }
 
 .socials {
   display: flex;
-
   align-items: center;
-  @media (max-width: $medium) {
-    display: none;
-  }
 }
 
 .submenu-container {
@@ -244,9 +246,6 @@ body {
   display: inline-block;
   color: #fff;
   text-align: left;
-  @media (max-width: $medium) {
-    display: none;
-  }
 
   a {
     display: block;
@@ -271,6 +270,21 @@ body {
   text-transform: uppercase;
   display: flex;
   justify-content: center;
+
+  @media (max-width: $small) {
+    justify-content: space-between;
+  }
+
+  .icon-item {
+    font-size: 20px;
+    margin-inline: 50px;
+    cursor: pointer;
+    transition: .3s all;
+
+    &:hover {
+      color: black;
+    }
+  }
 }
 
 .nav__menu-item {
@@ -278,6 +292,10 @@ body {
   width: 100%;
   max-width: 274px;
   position: relative;
+
+  @media (max-width: $small) {
+    display: none;
+  }
 
   &:hover {
     //background-color: $color-blue;

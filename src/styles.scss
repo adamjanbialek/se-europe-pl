@@ -23,6 +23,24 @@ button {
   cursor: pointer;
 }
 
+.buttons-container {
+  display: flex;
+  margin-top: 20px;
+
+  .button {
+    border-radius: 2px;
+    padding: 10px 20px;
+
+    &:first-of-type {
+      margin-left: auto;
+    }
+
+    &:not(:first-of-type) {
+      margin-left: 10px;
+    }
+  }
+}
+
 .button {
   border-radius: 10px;
   background: #1d6cc1;
@@ -34,6 +52,10 @@ button {
 
   &:hover {
     background: black;
+  }
+
+  &--red {
+    background: #de3939;
   }
 }
 

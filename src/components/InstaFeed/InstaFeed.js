@@ -2,16 +2,33 @@ import React, { useEffect } from 'react';
 
 export const InstaFeed = ({ url }) => {
     useEffect(() => {
-        // Load the Instagram embed script
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://www.instagram.com/embed.js';
-        document.body.appendChild(script);
+        const scriptId = 'instagram-embed-script';
+
+        if (!document.getElementById(scriptId)) {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.instagram.com/embed.js';
+            script.id = scriptId;
+            document.body.appendChild(script);
+
+            script.onload = () => {
+                if (window.instgrm) {
+                    window.instgrm.Embeds.process();
+                }
+            };
+        } else {
+            if (window.instgrm) {
+                window.instgrm.Embeds.process();
+            }
+        }
 
         return () => {
-            document.body.removeChild(script);
+            const existingScript = document.getElementById(scriptId);
+            if (existingScript) {
+                document.body.removeChild(existingScript);
+            }
         };
-    }, []);
+    }, [url]);
 
     return (
         <blockquote
@@ -28,7 +45,6 @@ export const InstaFeed = ({ url }) => {
                 minWidth: '300px',
                 padding: 0,
                 width: '99.375%',
-                height: 'undefined',
                 maxHeight: '100%',
             }}
         ></blockquote>

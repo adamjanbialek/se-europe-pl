@@ -78,7 +78,7 @@ export const ThreePoint = () => {
         <main>
             <section className={'section-contrains tables-page'}>
                 <div className={'heading-container'}>
-                    <h1 className={'page-title'}>Moja złączę</h1>
+                    <h1 className={'page-title'}>3 punkt</h1>
                     <p className={'paragraph paragraph--medium'}>Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.</p>
                 </div>
                 <div className={'available-choices-container'}>

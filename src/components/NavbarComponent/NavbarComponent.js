@@ -20,11 +20,12 @@ import {FindReseller} from "../../pages/FindReseller/FindReseller";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import { faAngleUp, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 export const NavbarComponent = () => {
     const [toggleSidebar, setToggleSidebar] = useContext(Context);
@@ -95,6 +96,9 @@ export const NavbarComponent = () => {
                 <div className={'nav--bottom text-shadow'}>
 
                     <ul className="nav__menu">
+                        <li className={'icon-item'}>
+                            <FontAwesomeIcon className={'sidebar-icon'} icon={faMagnifyingGlass} />
+                        </li>
                         <li className="nav__menu-item">
                             <a className={'link-container'}>
                                 Moje złącze
@@ -165,6 +169,9 @@ export const NavbarComponent = () => {
                                     <Link to={'/o-nas/znajdz-posrednika'} element={<FindReseller />}>Znajdź pośrednika</Link>
                                 </li>
                             </ul>
+                        </li>
+                        <li className={'icon-item'}>
+                            <FontAwesomeIcon className={'sidebar-icon'} icon={faUser} onClick={() => setToggleSidebar(!toggleSidebar)}/>
                         </li>
                     </ul>
                 </div>

@@ -1,4 +1,6 @@
 import './FindReseller.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 
 export const FindReseller = () => {
     return (
@@ -17,7 +19,11 @@ export const FindReseller = () => {
                     <p className={'paragraph paragraph--medium'}>
                         Dziękujemy za Twoje zapytanie!
                     </p>
-
+                    <br />
+                    <p className={'informational'}>
+                        <FontAwesomeIcon icon={faCircleInfo} />
+                        Pola oznaczone * są obowiązkowe.
+                    </p>
 
                     <form className={'form'}>
                         <div className={'field-container'}>
@@ -64,7 +70,10 @@ export const FindReseller = () => {
                             <label htmlFor={'message'}>Wiadomość*:</label>
                             <textarea required={true} placeholder={'Wpisz wiadomość'} id={'message'} className={'message-input'}/>
                         </div>
-                        <input type="submit"/>
+                        <div className='buttons-container'>
+                            <button className='button' type="submit">Wyślij</button>
+                            <button className='button button--red'>Reset</button>
+                        </div>
                     </form>
                 </div>
             </section>

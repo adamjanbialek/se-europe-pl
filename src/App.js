@@ -74,7 +74,7 @@ function App() {
                   <Route path="/" element={<HomePage />} />
                   <Route path="/moje-zlacze">
                       <Route index  element={<MyCoupling />} loader={productsLoader}/>
-                      <Route path="100838" element={<Se/>} />
+                      {/* <Route path="100838" element={<Se/>} /> */}
                       <Route path=":product" element={<Se/>} />
                       <Route path="3-punkt" element={<ThreePoint />} />
                   </Route>
