@@ -75,7 +75,7 @@ function App() {
       <Context.Provider value={[toggleSidebar, setToggleSidebar]}>
         <AuthContext.Provider value={[user, setUser]}>
             <Router>
-              <NavbarComponent />
+              <NavbarComponent products={products}/>
               <SidebarComponent />
               <Routes basename="/se-europe-pl">
                   <Route path="/" element={<HomePage />} />

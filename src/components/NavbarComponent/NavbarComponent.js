@@ -27,7 +27,7 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
-export const NavbarComponent = () => {
+export const NavbarComponent = (props) => {
     const [toggleSidebar, setToggleSidebar] = useContext(Context);
 
     let lastScrollTop = 0;
@@ -48,6 +48,7 @@ export const NavbarComponent = () => {
         {linkName: '3 punkt', url: '/moje-zlacze/3-punkt'},
     ];
 
+    {console.log(props.products)}
 
 
     const aboutUsSubmenu = [
@@ -105,23 +106,31 @@ export const NavbarComponent = () => {
                                 <FontAwesomeIcon icon={faAngleDown} className={'angle-up angle-up--main'} />
                             </a>
                             <ul className="nav__submenu">
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moje-zlacze/3-punkt'} element={<ThreePoint />}>3 punkt</Link>
-                                </li>
-                                <li className="nav__submenu-item nav__submenu-item--list">
-                                    <Link to={'/moje-zlacze/avant'} element={<ThreePoint />}>
-                                        Avant
-                                        <FontAwesomeIcon icon={faAngleDown} className={'angle-up'} />
-                                    </Link>
-                                    <ul>
-                                        <li>
-                                            <Link to={'/moje-zlacze/avant-200'} element={<ThreePoint />}>Avant 200</Link>
+                                {props.products.map(el => Array.isArray(el) ? 
+                                    <>
+                                    {
+                                        <>
+                                            <li className="nav__submenu-item nav__submenu-item--list">
+                                                <Link to={`/moje-zlacze/${el[0].couplings[0]}`} element={<ThreePoint />}>
+                                                    {el[0].couplings[1]}
+                                                    <FontAwesomeIcon icon={faAngleDown} className={'angle-up'} />
+                                                </Link>
+                                                <ul>
+                                                    {el.map(elem => <li><Link to={`/moje-zlacze/${elem.url}`}> {elem.name}</Link></li>)}
+                                                </ul>
+                                            </li>
+                                        </>
+                                    
+                                    }
+                                    </>
+                                    : 
+                                    <>
+                                        <li className="nav__submenu-item ">
+                                            <Link to={`/moje-zlacze/${el.url}`}>{el.name}</Link>
                                         </li>
-                                        <li>
-                                            <Link to={'/moje-zlacze/avant-multione'} element={<ThreePoint />}>Avant Multione</Link>
-                                        </li>
-                                    </ul>
-                                </li>
+                                    </>
+                                )}
+                                
                             </ul>
                         </li>
                         <li className="nav__menu-item">
