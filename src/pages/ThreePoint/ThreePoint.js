@@ -56,12 +56,12 @@ const productsData = {
     }
 };
 
-export const ThreePoint = () => {
+export const ThreePoint = (props) => {
     const [displayedItems, setDisplayedItems] = useState([0, 1000000]);
     const [checkboxes, setCheckboxes] = useState({});
 
     function findCheckboxes() {
-        return Object.values(productsData.tableData).flat().reduce((acc, product) => {
+        return Object.values(props.products.tableData).flat().reduce((acc, product) => {
             if (!acc.hasOwnProperty(product.coupling)) {
                 acc[product.coupling] = false;
             }
@@ -72,19 +72,19 @@ export const ThreePoint = () => {
     useEffect(() => {
         const uniqueCheckboxes = findCheckboxes();
         setCheckboxes(uniqueCheckboxes);
-    }, [productsData.tableData]);
+    }, [props.products.tableData]);
 
     return (
         <main>
             <section className={'section-contrains tables-page'}>
                 <div className={'heading-container'}>
-                    <h1 className={'page-title'}>3 punkt</h1>
-                    <p className={'paragraph paragraph--medium'}>Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.</p>
+                    <h1 className={'page-title'}>{props.products.name}</h1>
+                    <p className={'paragraph paragraph--medium'}>{props.products.description}</p>
                 </div>
                 <div className={'available-choices-container'}>
                     <div className={'choice-container'}>
                         <h2>Waga Maszyny</h2>
-                        <SliderRangeComponent productsData={productsData} setDiplayedItems={setDisplayedItems} />
+                        <SliderRangeComponent productsData={props.products} setDiplayedItems={setDisplayedItems} />
                     </div>
                     <div className={'choice-container'}>
                         <h2>Złącze</h2>
@@ -97,7 +97,7 @@ export const ThreePoint = () => {
                         </div>
                     </div>
                 </div>
-                <TableWithTabs productsData={productsData} displayedItems={displayedItems} checkboxes={checkboxes} />
+                <TableWithTabs productsData={props.products} displayedItems={displayedItems} checkboxes={checkboxes} />
             </section>
         </main>
     );

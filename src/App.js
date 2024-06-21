@@ -31,6 +31,7 @@ import {InvoiceOverview} from "./pages/InvoiceOverview/InvoiceOverview";
 import {Se} from "./pages/Se/Se";
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 import { Coupling } from './components/Coupling/Coupling';
+import { CouplingGroup } from './components/CouplingGroup/CouplingGroup';
 import jsonProduct from './data/products.json';
 
 export const Context = createContext(false);
@@ -66,8 +67,8 @@ function App() {
     // }
 
     let products = JSON.parse(JSON.stringify(jsonProduct, null, 2));
-    console.log(products);
-    {products.map(el => Array.isArray(el) ? '' : console.log(el) )}
+    // console.log(products);
+    // {products.map(el => Array.isArray(el) ? '' : console.log(el) )}
 
   return (
     <div className="App">
@@ -81,8 +82,18 @@ function App() {
                   <Route path="/moje-zlacze">
                       <Route index  element={<MyCoupling />} loader={productsLoader}/>
                       {/* <Route path="100838" element={<Se/>} /> */}
-                      <Route path=":product" element={<Coupling/>} />
-                      <Route path="3-punkt" element={<ThreePoint />} />
+                      {/* <Route path=":product" element={<Coupling/>} /> */}
+                      {products.map(el => Array.isArray(el) ? 
+                          <>
+                            <Route path={`${el[0].couplings[0]}`} element={<CouplingGroup couplingName={`${el[0].couplings[1]}`} products={el} />} ></Route>
+                            {el.map(
+                              elem => <Route path={`${elem.url}`} element={<ThreePoint products={elem}/>}/> 
+                            )}
+                          </>
+                        : 
+                          <Route path={`${el.url}`} element={<ThreePoint products={el}/>}/>
+                      )}
+                      {/* <Route path="3-punkt" element={<ThreePoint />} /> */}
                   </Route>
                   <Route path="/moja-maszyna">
                       <Route index element={<MyMachine />} />

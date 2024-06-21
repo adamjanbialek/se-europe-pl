@@ -1,0 +1,8 @@
+.coupling-group-item {
+    grid-template-columns: repeat(auto-fit, 303px) !important;
+    justify-content: space-between;
+    .link {
+        max-width: 303px;
+        height: 303px !important;
+    }
+}

@@ -1,5 +1,6 @@
 [
     {
+        "url": "3-punkt",
         "name": "3 punkt",
         "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
         "couplings": [],
@@ -52,9 +53,11 @@
     },
     [
         {
+            "url": "atlas-35",
             "name": "Atlas 35",
+            "imgUrl": "https://se-europe.com/images/prod630/atlas35.png",
             "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
-            "couplings": [],
+            "couplings": ["atlas", "Atlas"],
             "tableData": {
                 "ram": [
                     {
@@ -75,7 +78,9 @@
             }
         },
         {
+            "url": "atlas-65",
             "name": "Atlas 65",
+            "imgUrl":"https://se-europe.com/images/prod630/atlas65.png",
             "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
             "couplings": [],
             "tableData": {
@@ -87,7 +92,7 @@
                         "height": 850,
                         "capacity": 5000,
                         "machineSide": "atlas 65",
-                        "equipmentSide": "Big BM",
+                        "equipmentSide": "Stora BM",
                         "weight": 134
                     },
                     {
@@ -104,7 +109,9 @@
             }
         },
         {
+            "url": "atlas-95",
             "name": "Atlas 95",
+            "imgUrl": "https://se-europe.com/images/prod630/atlas95.png",
             "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
             "couplings": [],
             "tableData": {
@@ -126,6 +133,28 @@
                 ]
             }
         }
-    ]
+    ],
+    {
+        "url": "cat-906",
+        "name": "CAT 906",
+        "description": "Dostarczamy i przechowujemy narzędzia do ładowarek kołowych z mocowaniami CAT 906.",
+        "couplings": [],
+        "tableData": {
+            "redskapsfaste": [
+                {
+                    "artNo": 101299,
+                    "coupling": "Cat 906",
+                    "variant": "right",
+                    "weight": 26
+                },
+                {
+                    "artNo": 101300,
+                    "coupling": "Cat 906",
+                    "variant": "left",
+                    "weight": 26
+                }
+            ]
+        }
+    }
 ]
 
