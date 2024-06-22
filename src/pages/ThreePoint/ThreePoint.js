@@ -32,7 +32,7 @@ export const ThreePoint = (props) => {
                 <div className={'available-choices-container'}>
                     <div className={'choice-container'}>
                         <h2>Waga Maszyny</h2>
-                        <SliderRangeComponent productsData={props.products} setDiplayedItems={setDisplayedItems} />
+                        <SliderRangeComponent productsData={props.products} setDiplayedItems={setDisplayedItems}/>
                     </div>
                     <div className={'choice-container'}>
                         <h2>Złącze</h2>
