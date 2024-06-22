@@ -76,7 +76,7 @@ function App() {
         <AuthContext.Provider value={[user, setUser]}>
             <Router>
               <NavbarComponent products={products}/>
-              <SidebarComponent />
+              <SidebarComponent products={products}/>
               <Routes basename="/se-europe-pl">
                   <Route path="/" element={<HomePage />} />
                   <Route path="/moje-zlacze">

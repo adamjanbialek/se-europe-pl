@@ -4,58 +4,6 @@ import {SliderRangeComponent} from "../../components/SliderRangeComponent/Slider
 import {TableWithTabs} from "../../components/TableWithTabs/TableWithTabs";
 import {useState, useEffect} from "react";
 
-const productsData = {
-    name: '3 punkt',
-    description: 'Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.',
-    couplings: [],
-    tableData: {
-        adapter: [
-            {
-                artNo: 100838,
-                coupling: '3 punkt',
-                width: 1134,
-                height: 781,
-                capacity: 2500,
-                machineSide: '3punkt',
-                equipmentSide: 'SMS/Euro',
-                weight: 87
-            },
-            {
-                artNo: 100839,
-                coupling: '3 punkt',
-                width: 1165,
-                height: 850,
-                capacity: 5000,
-                machineSide: '3punkt',
-                equipmentSide: 'Stora BM',
-                weight: 121
-            },
-            {
-                artNo: 113542,
-                coupling: 'Big BM / 3 punkt',
-                width: 1184,
-                height: 492,
-                capacity: 2500,
-                machineSide: 'Big BM/3 punkt',
-                equipmentSide: 'SMS/Euro',
-                weight: 134
-            }
-        ],
-        stengrep: [
-            {
-                artNo: 113224,
-                coupling: '3 punkt',
-                width: 2000,
-                height: 600,
-                depth: 1000,
-                horn: 35,
-                bump: 'JA',
-                weight: 335
-            },
-        ]
-    }
-};
-
 export const ThreePoint = (props) => {
     const [displayedItems, setDisplayedItems] = useState([0, 1000000]);
     const [checkboxes, setCheckboxes] = useState({});

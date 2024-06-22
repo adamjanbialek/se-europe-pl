@@ -8,7 +8,7 @@ import {MyMachine} from "../../pages/MyMachine/MyMachine";
 import {AboutUs} from "../../pages/AboutUs/AboutUs";
 import {Contact} from "../../pages/Contact/Contact";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faXmark} from '@fortawesome/free-solid-svg-icons';
+import {faAngleDown, faXmark} from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -17,9 +17,10 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import {ThreePoint} from "../../pages/ThreePoint/ThreePoint";
 
 
-export const SidebarComponent = () => {
+export const SidebarComponent = (props) => {
     const [toggleSidebar, setToggleSidebar] = useContext(Context);
     const [ user, setUser ] = useContext(AuthContext);
     const [sidebarFunctionality, setSidebarFunctionality] = useState(false);
@@ -68,32 +69,37 @@ export const SidebarComponent = () => {
                         </AccordionSummary>
                         <AccordionDetails>
                             <ul >
-                                <li className="nav__submenu-item ">
-                                    <Link to={'/moje-zlacze/3-punkt'} >3 punkt</Link>
-                                </li>
-                                <li className="nav__submenu-item ">
-                                    <Accordion className={'aside__line aside__line--accordion'}>
-                                        <AccordionSummary
-                                            expandIcon={<FontAwesomeIcon className={'angle-up'} icon={faAngleUp} />}
-                                            aria-controls="panel2-content"
-                                            id="panel2-header"
-                                        >
-                                            <Link className={'aside__line aside__line--narrow'} to={'/moja-maszyna'} element={<MyMachine/>}>Atlas</Link>
-                                        </AccordionSummary>
-                                        <AccordionDetails>
-                                            <ul >
-                                                <li className="nav__submenu-item ">
-                                                    <Link to={''}>Atlas 35</Link>
+                                {props.products.map(el => Array.isArray(el) ?
+                                    <>
+                                        {
+                                            <>
+                                                <li className="nav__submenu-item">
+                                                    <Accordion className={'aside__line aside__line--accordion'}>
+                                                        <AccordionSummary
+                                                            expandIcon={<FontAwesomeIcon className={'angle-up'} icon={faAngleUp} />}
+                                                            aria-controls="panel2-content"
+                                                            id="panel2-header"
+                                                        >
+                                                            <Link className={'aside__line aside__line--narrow'} to={`/moje-zlacze/${el[0].couplings[0]}`} element={<MyMachine/>}>{el[0].couplings[1]}</Link>
+                                                        </AccordionSummary>
+                                                        <AccordionDetails>
+                                                            <ul>
+                                                                {el.map(elem => <li className="nav__submenu-item "><Link to={`/moje-zlacze/${elem.url}`}> {elem.name}</Link></li>)}
+                                                            </ul>
+                                                        </AccordionDetails>
+                                                    </Accordion>
                                                 </li>
+                                            </>
 
-                                                <li className="nav__submenu-item ">
-                                                    <Link to={''} >Atlas 95</Link>
-                                                </li>
-                                            </ul>
-
-                                        </AccordionDetails>
-                                    </Accordion>
-                                </li>
+                                        }
+                                    </>
+                                    :
+                                    <>
+                                        <li className="nav__submenu-item ">
+                                            <Link to={`/moje-zlacze/${el.url}`}>{el.name}</Link>
+                                        </li>
+                                    </>
+                                )}
                             </ul>
 
                         </AccordionDetails>
