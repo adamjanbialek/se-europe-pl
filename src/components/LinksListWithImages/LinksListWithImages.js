@@ -8,13 +8,13 @@ export const LinksListWithImages = (props) => {
                     <img src={product.imgUrl} />
                 </picture>;
                 return (
-                    <div className={'link'} >
+                    <a className={'link'} href={`/moje-zlacze/${product.couplings[0]}`}>
                         <div className={'bg-change'} />
                         {product.imgUrl ? el : ''}
                         <p className={'link-name'} >
-                            {product.name}
+                            {product.couplings[1]}
                         </p>
-                    </div>
+                    </a>
                 )
             })}
         </div>

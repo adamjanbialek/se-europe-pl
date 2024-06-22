@@ -80,7 +80,7 @@ function App() {
               <Routes basename="/se-europe-pl">
                   <Route path="/" element={<HomePage />} />
                   <Route path="/moje-zlacze">
-                      <Route index  element={<MyCoupling />} loader={productsLoader}/>
+                      <Route index  element={<MyCoupling products={products} />} />
                       {/* <Route path="100838" element={<Se/>} /> */}
                       {/* <Route path=":product" element={<Coupling/>} /> */}
                       {products.map(el => Array.isArray(el) ? 

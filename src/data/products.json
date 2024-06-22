@@ -3,7 +3,7 @@
         "url": "3-punkt",
         "name": "3 punkt",
         "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
-        "couplings": [],
+        "couplings": ["3-punkt","3 punkt"],
         "tableData": {
             "adapter": [
                 {
@@ -137,8 +137,9 @@
     {
         "url": "cat-906",
         "name": "CAT 906",
+        "imgUrl": "https://seequipment.se/images/prod630/101299.1360.png",
         "description": "Dostarczamy i przechowujemy narzędzia do ładowarek kołowych z mocowaniami CAT 906.",
-        "couplings": [],
+        "couplings": ["cat-906","CAT 906"],
         "tableData": {
             "redskapsfaste": [
                 {
