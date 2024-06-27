@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e27da59-e857-41d0-89e3-424ece829164" name="Changes" comment="init #1">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,12 +35,24 @@
         <entry key="$PROJECT_DIR$/se-europe-pl" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/se-europe-pl" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sduranowski1&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/adamjanbialek/se-europe-pl.git&quot;,
+    &quot;accountId&quot;: &quot;2bf135a3-d0fd-4eac-b068-05c8f2169df3&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/Cellar/php/8.3.1/bin/php">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\Program Files\php\php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/symfony/flex" />
@@ -334,7 +349,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14015.96" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.17890.8" />
+        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.17890.8" />
       </set>
     </attachedChunks>
   </component>
@@ -366,6 +382,12 @@
       <workItem from="1717800994722" duration="5545000" />
       <workItem from="1717854028698" duration="2485000" />
       <workItem from="1718627630584" duration="2016000" />
+      <workItem from="1719404584561" duration="1320000" />
+      <workItem from="1719409239720" duration="607000" />
+      <workItem from="1719409874213" duration="3795000" />
+      <workItem from="1719474378785" duration="643000" />
+      <workItem from="1719475136496" duration="1789000" />
+      <workItem from="1719477207315" duration="2956000" />
     </task>
     <task id="LOCAL-00001" summary="init #1">
       <option name="closed" value="true" />
