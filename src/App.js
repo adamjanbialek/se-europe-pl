@@ -77,7 +77,7 @@ function App() {
             <Router>
               <NavbarComponent products={products}/>
               <SidebarComponent products={products}/>
-              <Routes basename="/se-europe-pl">
+              <Routes >
                   <Route path="/" element={<HomePage />} />
                   <Route path="/moje-zlacze">
                       <Route index  element={<MyCoupling products={products} />} />
