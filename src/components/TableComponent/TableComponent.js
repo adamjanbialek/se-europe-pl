@@ -26,7 +26,7 @@ export const TableComponent = (props) => {
     }
 
     function checkItemQuantity(item, amountToChange) {
-        console.log(cart.find(el => el.id === item.id)?.hasOwnProperty('quantity') ? cart.find(el => el.id === item.id)['quantity'] += amountToChange : item['quantity'] = amountToChange) ;
+        console.log(cart.find(el => el.id === item.id)?.hasOwnProperty('quantity') ? cart.find(el => el.id === item.id)['quantity'] += amountToChange : item['quantity'] = amountToChange);
     }
 
     function addToCart() {
