@@ -48,8 +48,6 @@ export const NavbarComponent = (props) => {
         {linkName: '3 punkt', url: '/moje-zlacze/3-punkt'},
     ];
 
-    {console.log(props.products)}
-
 
     const aboutUsSubmenu = [
         {linkName: 'Kontakt', url: '/o-nas/kontakt'},

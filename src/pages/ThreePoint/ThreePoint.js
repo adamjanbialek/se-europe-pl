@@ -22,6 +22,8 @@ export const ThreePoint = (props) => {
         setCheckboxes(uniqueCheckboxes);
     }, [props.products.tableData]);
 
+    {console.log(props)}
+
     return (
         <main>
             <section className={'section-contrains tables-page'}>
