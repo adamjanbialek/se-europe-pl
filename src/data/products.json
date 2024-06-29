@@ -1,161 +1,81 @@
 [
-    {
-        "url": "3-punkt",
-        "name": "3 punkt",
-        "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
-        "couplings": ["3-punkt","3 punkt"],
-        "tableData": {
-            "adapter": [
-                {
-                    "artNo": 100838,
-                    "coupling": "3 punkt",
-                    "width": 1134,
-                    "height": 781,
-                    "capacity": 2500,
-                    "machineSide": "3punkt",
-                    "equipmentSide": "SMS/Euro",
-                    "weight": 87
-                },
-                {
-                    "artNo": 100839,
-                    "coupling": "3 punkt",
-                    "width": 1165,
-                    "height": 850,
-                    "capacity": 5000,
-                    "machineSide": "3punkt",
-                    "equipmentSide": "Stora BM",
-                    "weight": 121
-                },
-                {
-                    "artNo": 113542,
-                    "coupling": "Big BM / 3 punkt",
-                    "width": 1184,
-                    "height": 492,
-                    "capacity": 2500,
-                    "machineSide": "Big BM/3 punkt",
-                    "equipmentSide": "SMS/Euro",
-                    "weight": 134
-                }
-            ],
-            "stengrep": [
-                {
-                    "artNo": 113224,
-                    "coupling": "3 punkt",
-                    "width": 2000,
-                    "height": 600,
-                    "depth": 1000,
-                    "horn": 35,
-                    "bump": "JA",
-                    "weight": 335
-                }
-            ]
-        }
-    },
-    [
-        {
-            "url": "atlas-35",
-            "name": "Atlas 35",
-            "imgUrl": "https://se-europe.com/images/prod630/atlas35.png",
-            "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
-            "couplings": ["atlas", "Atlas"],
-            "tableData": {
-                "ram": [
-                    {
-                        "artNo": 100997,
-                        "coupling": "Atlas 35",
-                        "width": 1200,
-                        "capacity": 1500,
-                        "weight": 50
-                    }
-                ],
-                "redskapsfaste": [
-                    {
-                        "artNo": 101281,
-                        "coupling": "Atlas 35",
-                        "weight": 8
-                    }
-                ]
-            }
-        },
-        {
-            "url": "atlas-65",
-            "name": "Atlas 65",
-            "imgUrl":"https://se-europe.com/images/prod630/atlas65.png",
-            "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
-            "couplings": [],
-            "tableData": {
-                "adapter": [
-                    {
-                        "artNo": 112475,
-                        "coupling": "atlas 65",
-                        "width": 1165,
-                        "height": 850,
-                        "capacity": 5000,
-                        "machineSide": "atlas 65",
-                        "equipmentSide": "Stora BM",
-                        "weight": 134
-                    },
-                    {
-                        "artNo": 112476,
-                        "coupling": "atlas 65",
-                        "width": 1184,
-                        "height": 492,
-                        "capacity": 2500,
-                        "machineSide": "atlas 65",
-                        "equipmentSide": "SMS/Euro",
-                        "weight": 79
-                    }
-                ]
-            }
-        },
-        {
-            "url": "atlas-95",
-            "name": "Atlas 95",
-            "imgUrl": "https://se-europe.com/images/prod630/atlas95.png",
-            "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
-            "couplings": [],
-            "tableData": {
-                "ram": [
-                    {
-                        "artNo": 100999,
-                        "coupling": "atlas 95",
-                        "width": 1200,
-                        "capacity": 5000,
-                        "weight": 108
-                    }
-                ],
-                "redskapsfaste": [
-                    {
-                        "artNo": 101287,
-                        "coupling": "atlas 95",
-                        "weight": 20
-                    }
-                ]
-            }
-        }
-    ],
-    {
-        "url": "cat-906",
-        "name": "CAT 906",
-        "imgUrl": "https://seequipment.se/images/prod630/101299.1360.png",
-        "description": "Dostarczamy i przechowujemy narzędzia do ładowarek kołowych z mocowaniami CAT 906.",
-        "couplings": ["cat-906","CAT 906"],
-        "tableData": {
-            "redskapsfaste": [
-                {
-                    "artNo": 101299,
-                    "coupling": "Cat 906",
-                    "variant": "right",
-                    "weight": 26
-                },
-                {
-                    "artNo": 101300,
-                    "coupling": "Cat 906",
-                    "variant": "left",
-                    "weight": 26
-                }
-            ]
-        }
-    }
+  {
+    "id": 100838,
+    "heading": "3 POINT TO SMS/EURO MECH ADAPTER",
+    "title": "Adapter for tractor",
+    "subtitle": "With an adapter from SE Equipment you save both time and money.",
+    "imgUrl": "https://se-europe.com/images/prod500/3punkt_SMS_euro_adapter_traktor.png",
+    "imgText": "Bild visar: 3Punkt kat 2 till SMS/Euro",
+    "description": ["SE Equipment offer you a simple solution to make your work more efficient.\nThrough an adapter from us with machine side 3 point kat 2 to\nequipment side SMS/Euro, you get the opportunity to mount one equipment\nwith another coupling than that for which the machine is adapted for. With our\nadapter you don´t have to put extra costs for buying new equipment or\nnew machine.","We present our adapter in great variety and in many different combinations but\nthey are all manufactured with a stable frame to withstand tougher grips.\nIf you have a job where you often need to switch between different devices,\nour adapter is the one optimal solution."],
+    "benefits": ["Simple solution for more efficient work","Avoid buying a new machine or equipment","Many different models"],
+    "technicalData": [["Capacity",2500],["Width",1134],["Height",781],["Weight",87],["Machine side","3 Punkt Kat 2"],["Equipment side","SMS/Euro"]],
+    "price": 890,
+    "stock": 1
+  },
+  {
+    "id": 100839,
+    "heading": "3 POINT TO BIG BM MECH ADAPTER",
+    "title": "Adapter for skid loader",
+    "subtitle": "With an adapter from SE Equipment you save both time and money.",
+    "imgUrl": "https://se-europe.com/images/prod500/3punkt_storaBM_adapter_traktor.png",
+    "imgText": "Bild visar: 3Punkt kat 2 till SMS/Euro",
+    "description": ["SE Equipment offer you a simple solution to make your work more efficient.\nThrough an adapter from us with machine side 3 point kat 2 to\nequipment side Big BM, you get the opportunity to mount one equipment\nwith another coupling than that for which the machine is adapted for. With our\nadapter you don´t have to put extra costs for buying new equipment or\nnew machine.","We present our adapter in great variety and in many different combinations but\nthey are all manufactured with a stable frame to withstand tougher grips.\nIf you have a job where you often need to switch between different devices,\nour adapter is the one optimal solution."],
+    "benefits": ["Simple solution for more efficient work","Avoid buying a new machine or equipment","Many different models"],
+    "technicalData": [["Capacity",2500],["Width",1134],["Height",781],["Weight",87],["Machine side","3 Punkt Kat 2"],["Equipment side","SMS/Euro"]],
+    "price": 990,
+    "stock": 2
+  },
+  {
+    "id": 113542,
+    "heading": "BIG BM/3 POINT TO SMS/EURO\nMECH ADAPTER",
+    "title": "Adapter for wheel loader",
+    "subtitle": "With an adapter from SE Equipment you save both time and money.",
+    "imgUrl": "https://se-europe.com/images/prod500/StoraBM_3punkt_till_SMS_Euro_adapter%20(1).png",
+    "imgText": "Bild visar: Stora BM/3 punkt till SMS/Euro",
+    "description": ["SE Equipment offer you a cheap and simple solution to make your work\nmore efficient. Through an adapter from us with machine side Big BM to\nequipment side SMS/Euro, you get the opportunity to mount one equipment\nwith another coupling than that for which the machine is adapted for. With our\nadapter you don´t have to put extra costs for buying new equipment or\nnew machine.","We present our adapter in great variety and in many different combinations but\nthey are all manufactured with a stable frame to withstand tougher grips, grease\nnipple for easy greasing and lever locking. If you have a job where you often need\nto switch between different devices, our adapter is the one optimal solution."],
+    "benefits": ["Cheap and simple solution for more efficient work","Avoid buying a new machine or equipment","Many different models","Lever locking","Grease nipples for easy lubrication"],
+    "technicalData": [["Type","Mekanisk"],["Capacity",2500],["Width",1184],["Height",492],["Weight",134],["Machine side","Big BM/3 point"],["Equipment side","SMS/Euro"],["Technical data has changed",""]],
+    "price": 990,
+    "stock": 2
+  },
+  {
+    "id": 113224,
+    "heading": "3 POINT STONE FORK 2000MM",
+    "title": "Stone fork for tractor",
+    "subtitle": "For efficient stone cleaning in fields and farmland.",
+    "imgUrl": "https://se-europe.com/images/prod500/StoraBM_3punkt_till_SMS_Euro_adapter%20(1).png",
+    "imgText": "Bild visar: SMS 2000mm",
+    "description": ["Stone fork with 3 point bracket from SE Equipment for tractor\nis a construction designed to pick and transport stones from\nfields and farmland. Our stone fork is also suitable for transporting\nbranches and brush. We use high-quality steel in the manufacturing\nprocess, allowing the stone fork with 3 point bracket to withstand\nhigh pressure and high stress that occurs when handling heavy materials.\n\n","The stone chamber and horns are designed to handle both large and small\nstones, and the stone chamber can hold a large volume of stones, reducing\nthe need of constant emptying. To prevent stones or other materials from falling\nout during shaking or transport, there is a prominent bump at the front of the\nstone fork."],
+    "benefits": ["Cleans stones of different sizes","Large volume","Bump at the front","High-quality steel","Transport branches or brush"],
+    "technicalData": [["Depth","1000mm"],["Width",2000],["Height",600],["Weight",335],["Coupling","3 punkt"],["Horn","35mm"],["Bump","YES"],["Technical data has changed",""]],
+    "price": 990,
+    "stock": 2
+  },
+  {
+    "id": 101299,
+    "heading": "CAT 906 RIGHT COUPLING",
+    "title": "Couplings from SE Equipment that fit all types of equipment and machinery.",
+    "subtitle": "The couplings are cut from high quality steel to provide the best possible life span.",
+    "imgUrl": "https://se-europe.com/images/prod500/101299.1360.png",
+    "imgText": "",
+    "description": [],
+    "benefits": [],
+    "technicalData": [["Weight",26],["Coupling","Cat 906"],["Variant","Right"]],
+    "price": 990,
+    "stock": 2
+  },
+  {
+    "id": 101300,
+    "heading": "CAT 906 LEFT COUPLING",
+    "title": "Couplings from SE Equipment that fit all types of equipment and machinery.",
+    "subtitle": "The couplings are cut from high quality steel to provide the best possible life span.",
+    "imgUrl": "https://se-europe.com/images/prod500/101300.1359.png",
+    "imgText": "",
+    "description": [],
+    "benefits": [],
+    "technicalData": [["Weight",26],["Coupling","Cat 906"],["Variant","Left"]],
+    "price": 990,
+    "stock": 2
+  }
 ]
 

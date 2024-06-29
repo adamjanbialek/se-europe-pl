@@ -1,0 +1,161 @@
+[
+    {
+        "url": "3-punkt",
+        "name": "3 punkt",
+        "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
+        "couplings": ["3-punkt","3 punkt"],
+        "tableData": {
+            "adapter": [
+                {
+                    "artNo": 100838,
+                    "coupling": "3 punkt",
+                    "width": 1134,
+                    "height": 781,
+                    "capacity": 2500,
+                    "machineSide": "3punkt",
+                    "equipmentSide": "SMS/Euro",
+                    "weight": 87
+                },
+                {
+                    "artNo": 100839,
+                    "coupling": "3 punkt",
+                    "width": 1165,
+                    "height": 850,
+                    "capacity": 5000,
+                    "machineSide": "3punkt",
+                    "equipmentSide": "Stora BM",
+                    "weight": 121
+                },
+                {
+                    "artNo": 113542,
+                    "coupling": "Big BM / 3 punkt",
+                    "width": 1184,
+                    "height": 492,
+                    "capacity": 2500,
+                    "machineSide": "Big BM/3 punkt",
+                    "equipmentSide": "SMS/Euro",
+                    "weight": 134
+                }
+            ],
+            "stengrep": [
+                {
+                    "artNo": 113224,
+                    "coupling": "3 punkt",
+                    "width": 2000,
+                    "height": 600,
+                    "depth": 1000,
+                    "horn": 35,
+                    "bump": "JA",
+                    "weight": 335
+                }
+            ]
+        }
+    },
+    [
+        {
+            "url": "atlas-35",
+            "name": "Atlas 35",
+            "imgUrl": "https://se-europe.com/images/prod630/atlas35.png",
+            "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
+            "couplings": ["atlas", "Atlas"],
+            "tableData": {
+                "ram": [
+                    {
+                        "artNo": 100997,
+                        "coupling": "Atlas 35",
+                        "width": 1200,
+                        "capacity": 1500,
+                        "weight": 50
+                    }
+                ],
+                "redskapsfaste": [
+                    {
+                        "artNo": 101281,
+                        "coupling": "Atlas 35",
+                        "weight": 8
+                    }
+                ]
+            }
+        },
+        {
+            "url": "atlas-65",
+            "name": "Atlas 65",
+            "imgUrl":"https://se-europe.com/images/prod630/atlas65.png",
+            "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
+            "couplings": [],
+            "tableData": {
+                "adapter": [
+                    {
+                        "artNo": 112475,
+                        "coupling": "atlas 65",
+                        "width": 1165,
+                        "height": 850,
+                        "capacity": 5000,
+                        "machineSide": "atlas 65",
+                        "equipmentSide": "Stora BM",
+                        "weight": 134
+                    },
+                    {
+                        "artNo": 112476,
+                        "coupling": "atlas 65",
+                        "width": 1184,
+                        "height": 492,
+                        "capacity": 2500,
+                        "machineSide": "atlas 65",
+                        "equipmentSide": "SMS/Euro",
+                        "weight": 79
+                    }
+                ]
+            }
+        },
+        {
+            "url": "atlas-95",
+            "name": "Atlas 95",
+            "imgUrl": "https://se-europe.com/images/prod630/atlas95.png",
+            "description": "Zajmujemy się dostawą i magazynowaniem osprzętu do ciągników.",
+            "couplings": [],
+            "tableData": {
+                "ram": [
+                    {
+                        "artNo": 100999,
+                        "coupling": "atlas 95",
+                        "width": 1200,
+                        "capacity": 5000,
+                        "weight": 108
+                    }
+                ],
+                "redskapsfaste": [
+                    {
+                        "artNo": 101287,
+                        "coupling": "atlas 95",
+                        "weight": 20
+                    }
+                ]
+            }
+        }
+    ],
+    {
+        "url": "cat-906",
+        "name": "CAT 906",
+        "imgUrl": "https://seequipment.se/images/prod630/101299.1360.png",
+        "description": "Dostarczamy i przechowujemy narzędzia do ładowarek kołowych z mocowaniami CAT 906.",
+        "couplings": ["cat-906","CAT 906"],
+        "tableData": {
+            "redskapsfaste": [
+                {
+                    "artNo": 101299,
+                    "coupling": "Cat 906",
+                    "variant": "right",
+                    "weight": 26
+                },
+                {
+                    "artNo": 101300,
+                    "coupling": "Cat 906",
+                    "variant": "left",
+                    "weight": 26
+                }
+            ]
+        }
+    }
+]
+
