@@ -35,7 +35,7 @@
     "description": ["SE Equipment offer you a cheap and simple solution to make your work\nmore efficient. Through an adapter from us with machine side Big BM to\nequipment side SMS/Euro, you get the opportunity to mount one equipment\nwith another coupling than that for which the machine is adapted for. With our\nadapter you don´t have to put extra costs for buying new equipment or\nnew machine.","We present our adapter in great variety and in many different combinations but\nthey are all manufactured with a stable frame to withstand tougher grips, grease\nnipple for easy greasing and lever locking. If you have a job where you often need\nto switch between different devices, our adapter is the one optimal solution."],
     "benefits": ["Cheap and simple solution for more efficient work","Avoid buying a new machine or equipment","Many different models","Lever locking","Grease nipples for easy lubrication"],
     "technicalData": [["Type","Mekanisk"],["Capacity",2500],["Width",1184],["Height",492],["Weight",134],["Machine side","Big BM/3 point"],["Equipment side","SMS/Euro"],["Technical data has changed",""]],
-    "price": 990,
+    "price": 1090,
     "stock": 2
   },
   {
@@ -48,7 +48,7 @@
     "description": ["Stone fork with 3 point bracket from SE Equipment for tractor\nis a construction designed to pick and transport stones from\nfields and farmland. Our stone fork is also suitable for transporting\nbranches and brush. We use high-quality steel in the manufacturing\nprocess, allowing the stone fork with 3 point bracket to withstand\nhigh pressure and high stress that occurs when handling heavy materials.\n\n","The stone chamber and horns are designed to handle both large and small\nstones, and the stone chamber can hold a large volume of stones, reducing\nthe need of constant emptying. To prevent stones or other materials from falling\nout during shaking or transport, there is a prominent bump at the front of the\nstone fork."],
     "benefits": ["Cleans stones of different sizes","Large volume","Bump at the front","High-quality steel","Transport branches or brush"],
     "technicalData": [["Depth","1000mm"],["Width",2000],["Height",600],["Weight",335],["Coupling","3 punkt"],["Horn","35mm"],["Bump","YES"],["Technical data has changed",""]],
-    "price": 990,
+    "price": 2190,
     "stock": 2
   },
   {
@@ -61,7 +61,7 @@
     "description": [],
     "benefits": [],
     "technicalData": [["Weight",26],["Coupling","Cat 906"],["Variant","Right"]],
-    "price": 990,
+    "price": 140,
     "stock": 2
   },
   {
@@ -74,7 +74,7 @@
     "description": [],
     "benefits": [],
     "technicalData": [["Weight",26],["Coupling","Cat 906"],["Variant","Left"]],
-    "price": 990,
+    "price": 140,
     "stock": 1
   }
 ]

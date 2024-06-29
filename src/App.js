@@ -71,16 +71,12 @@ function App() {
 
     let couplings = JSON.parse(JSON.stringify(jsonCouplings, null, 2));
     let products = JSON.parse(JSON.stringify(jsonProducts, null, 2));
-    // console.log(products);
-    // {products.map(el => Array.isArray(el) ? '' : console.log(el) )}
 
     function flattenArray(arr) {
         return arr.reduce((acc, val) => {
             if (Array.isArray(val)) {
-                // Recursively flatten nested arrays
                 acc.push(...flattenArray(val));
             } else if (typeof val === 'object' && val !== null) {
-                // Push the object into the accumulator
                 acc.push(val);
             }
             return acc;
@@ -103,9 +99,9 @@ function App() {
 
                                                                                       // coupling={couplings.filter(elem => Object.values(elem.tableData))}
                             />} />) }
-                            {console.log(flattenArray(couplings).map(el => Object.values(el.tableData).flat().filter(el => el.artNo === 100838)).flat().find(el => el.artNo === 100838))
-                                // console.log(Object.values(elem.tableData).flat().filter(el => el.artNo === 100838))
-                            }
+                            {/*{console.log(flattenArray(couplings).map(el => Object.values(el.tableData).flat().filter(el => el.artNo === 100838)).flat().find(el => el.artNo === 100838))*/}
+                            {/*    console.log(Object.values(elem.tableData).flat().filter(el => el.artNo === 100838))*/}
+                            {/*}*/}
                             {/* <Route path=":product" element={<Coupling/>} /> */}
                             {couplings.map(el => Array.isArray(el) ?
                                 <>

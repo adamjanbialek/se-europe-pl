@@ -10,9 +10,12 @@ import Paper from '@mui/material/Paper';
 import {Link} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import {useContext} from "react";
+import {CartContext} from "../../App";
 
 
 export const TableComponent = (props) => {
+    const [cart, setCart] = useContext(CartContext);
 
     function isChecked(product) {
         if(Object.entries(props.checkboxes).filter(checkbox => checkbox[1] === true).length === 0 ||
@@ -50,7 +53,9 @@ export const TableComponent = (props) => {
                         return (
                             <TableRow
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                            ><button className='buy-btn btn-container'>BUY</button>
+                            ><button className='buy-btn btn-container' onClick={() => {
+                                setCart([...cart, product]);
+                            }}>BUY</button>
                             <FontAwesomeIcon icon={faHeart} className={'like favourite-container'} onClick={onToggleFav} />
                                 {fields.map((field, index) => {
                                     return index === 0 ? <TableCell><Link to={`../${field}`}>{field}</Link></TableCell> : <TableCell>{field}</TableCell>;
