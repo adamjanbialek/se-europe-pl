@@ -48,7 +48,7 @@ export const TableComponent = (props) => {
                     {props.data.filter(product=> {
                         return product.weight >= props.displayedItems[0] & product.weight <= props.displayedItems[1]
                     }).filter(product => isChecked(product)).map(product => {
-                        const fields = Object.values(product);
+                        const fields = Object.values(product) ;
                 
                         return (
                             <TableRow
