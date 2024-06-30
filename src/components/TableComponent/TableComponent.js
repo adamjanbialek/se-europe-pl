@@ -14,48 +14,17 @@ import {useContext} from "react";
 
 import {CartContext} from "../../App";
 import jsonProducts from '../../data/products.json';
+import {AmountButtonGroup} from "../AmountButtonGroup/AmountButtonGroup";
 
 let products = JSON.parse(JSON.stringify(jsonProducts, null, 2));
 
 export const TableComponent = (props) => {
-    const [cart, setCart] = useContext(CartContext);
 
-    function findProduct(product) {
-        const [item] = products.filter(el => el.id === product.artNo);
-        return item;
-    }
-
-    function checkItemQuantity(item, amountToChange) {
-        console.log(cart.find(el => el.id === item.id)?.hasOwnProperty('quantity') ? cart.find(el => el.id === item.id)['quantity'] += amountToChange : item['quantity'] = amountToChange);
-    }
-
-    function addToCart() {
-
-    }
-
-    function removeFromCart() {
-
-    }
-
-    function changeCart(product, amountToChange) {
-        const cartProduct = findProduct(product);
-        console.log(amountToChange);
-        checkItemQuantity(cartProduct, amountToChange);
-        setCart([...cart, cartProduct]);
-    }
 
     function isChecked(product) {
         if(Object.entries(props.checkboxes).filter(checkbox => checkbox[1] === true).length === 0 ||
             Object.entries(props.checkboxes).filter(checkbox => checkbox[1] === true).map(checkbox => checkbox[0]).includes(product.coupling)) {
             return product;
-        }
-    }
-
-    function onToggleFav(event) {
-        if(event.target.style.color === '') {
-            event.target.style.color = 'red'
-        } else {
-            event.target.style.color = ''
         }
     }
 
@@ -79,11 +48,15 @@ export const TableComponent = (props) => {
                 
                         return (
                             <TableRow
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }} onClick={() => {
-                                    console.log(cart);
+                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }} className={'tr'} onClick={() => {
+                                    // console.log(cart);
                             }}
-                            ><button className='buy-btn btn-container' onClick={() => changeCart(product, 1)}>BUY</button>
-                            <FontAwesomeIcon icon={faHeart} className={'like favourite-container'} onClick={onToggleFav} />
+                            >
+                                <AmountButtonGroup product={product} />
+                                {/*<button className='buy-btn btn-container' onClick={() => changeCart(product, 1)}>BUY</button>*/}
+                                {/*<button className='buy-btn btn-container' onClick={() => changeCart(product, 1)}>-</button>*/}
+                                {/*<div>{1}</div>*/}
+                                {/*<button className='buy-btn btn-container' onClick={() => changeCart(product, 1)}>+</button>*/}
                                 {fields.map((field, index) => {
                                     return index === 0 ? <TableCell><Link to={`../${field}`}>{field}</Link></TableCell> : <TableCell>{field}</TableCell>;
                                 })}

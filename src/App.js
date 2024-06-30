@@ -34,6 +34,7 @@ import { Coupling } from './components/Coupling/Coupling';
 import { CouplingGroup } from './components/CouplingGroup/CouplingGroup';
 import jsonCouplings from './data/couplings.json';
 import jsonProducts from './data/products.json';
+import {CartSidebar} from "./components/CartSidebar/CartSidebar";
 
 export const Context = createContext(false);
 export const ProductContext = createContext(false);
@@ -91,6 +92,7 @@ function App() {
                 <Router>
                     <NavbarComponent products={couplings}/>
                     <SidebarComponent products={couplings}/>
+                    <CartSidebar/>
                     <Routes basename="/se-europe-pl">
                         <Route path="/" element={<HomePage />} />
                         <Route path="/moje-zlacze">

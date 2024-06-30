@@ -34,3 +34,9 @@ thead {
         background: black;
     }
 }
+
+.tr {
+    &:hover {
+        background-color: #b7c9dc;
+    }
+}
