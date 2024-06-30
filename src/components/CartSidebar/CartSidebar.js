@@ -23,7 +23,7 @@ export const CartSidebar = () => {
                         <h2 className={'sidebar-title'}>
                             Koszyk
                         </h2>
-                        <FontAwesomeIcon className={'btn btn--close btn--close--cart'} icon={faXmark} />
+                        <FontAwesomeIcon className={'btn btn--close btn--close--cart'} icon={faXmark}/>
                     </div>
                 </div>
                 <div className={`aside__line-container aside__line-container--cart`}>
