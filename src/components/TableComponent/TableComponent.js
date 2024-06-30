@@ -8,11 +8,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import {Link} from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import {useContext} from "react";
-
-import {CartContext} from "../../App";
 import jsonProducts from '../../data/products.json';
 import {AmountButtonGroup} from "../AmountButtonGroup/AmountButtonGroup";
 

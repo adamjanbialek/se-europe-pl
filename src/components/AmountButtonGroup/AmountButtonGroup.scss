@@ -10,4 +10,11 @@
 div.buy-btn.btn-container {
   border: none !important;
   padding:  0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: #1d6cc1 !important;
+  }
 }

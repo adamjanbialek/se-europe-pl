@@ -36,13 +36,15 @@ import jsonCouplings from './data/couplings.json';
 import jsonProducts from './data/products.json';
 import {CartSidebar} from "./components/CartSidebar/CartSidebar";
 
-export const Context = createContext(false);
+export const Context = createContext({sidebar: false, cartSidebar: false});
 export const ProductContext = createContext(false);
 export const AuthContext = createContext(null);
 export const CartContext = createContext([]);
 
 function App() {
-    const [toggleSidebar, setToggleSidebar] = useState(false);
+    const [toggleSidebar, setToggleSidebar] = useState({sidebar: false, cartSidebar: false});
+
+    const [toggleCartSidebar, setToggleCartSidebar] = useState({sidebar: false, cartSidebar: false});
 
     const [ user, setUser ] = useState({name: "", isAuthenticated: false})
 
@@ -86,7 +88,7 @@ function App() {
 
   return (
     <div className="App">
-      <Context.Provider value={[toggleSidebar, setToggleSidebar]}>
+      <Context.Provider value={[toggleSidebar, setToggleSidebar, toggleCartSidebar, setToggleCartSidebar]}>
         <AuthContext.Provider value={[user, setUser]}>
             <CartContext.Provider value={[cart, setCart]}>
                 <Router>

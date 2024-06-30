@@ -19,6 +19,7 @@ import {Sustainability} from "../../pages/Sustainability/Sustainability";
 import {FindReseller} from "../../pages/FindReseller/FindReseller";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faAngleUp, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -86,7 +87,7 @@ export const NavbarComponent = (props) => {
                             </Link>
                         </div>
                         <div className={'sidebar-toggle'}>
-                            <button className={'icon'} onClick={() => setToggleSidebar(!toggleSidebar)}>
+                            <button className={'icon'} onClick={() => setToggleSidebar({sidebar: true})}>
                                 <FontAwesomeIcon icon={faBars} />
                             </button>
                         </div>
@@ -178,7 +179,10 @@ export const NavbarComponent = (props) => {
                             </ul>
                         </li>
                         <li className={'icon-item'}>
-                            <FontAwesomeIcon className={'sidebar-icon'} icon={faUser} onClick={() => setToggleSidebar(!toggleSidebar)}/>
+                            <FontAwesomeIcon className={'sidebar-icon'} icon={faUser} onClick={() => setToggleSidebar({sidebar: true})}/>
+                        </li>
+                        <li className={'icon-item'}>
+                            <FontAwesomeIcon className={'sidebar-icon'} icon={faCartShopping} onClick={() => setToggleSidebar({cartSidebar: true})}/>
                         </li>
                     </ul>
                 </div>

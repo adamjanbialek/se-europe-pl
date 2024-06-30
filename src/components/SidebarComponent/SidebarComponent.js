@@ -35,14 +35,14 @@ export const SidebarComponent = (props) => {
     }
 
     return (
-        <aside className={`${!toggleSidebar ? 'aside-container--hidden' : ''}`}>
+        <aside className={`${!toggleSidebar.sidebar ? 'aside-container--hidden' : ''}`}>
             <div className={`aside__subcontainer ${sidebarFunctionality ? 'aside__subcontainer--hidden' : ''}`}>
                 <div className={'aside__line-container'}>
                     <div className={'aside__line aside__line--no-bg'}>
                         <h2 className={'sidebar-title'}>
                             Menu
                         </h2>
-                        <FontAwesomeIcon className={'btn btn--close'} icon={faXmark} onClick={() => {setToggleSidebar(false)}}/>
+                        <FontAwesomeIcon className={'btn btn--close'} icon={faXmark} onClick={() => {setToggleSidebar({sidebar: false})}}/>
                     </div>
                 </div>
                 <div className={`aside__line-container`}>
