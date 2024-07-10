@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/se-europe-pl/static/css/main.6ed9cf7e.css",
-    "main.js": "/se-europe-pl/static/js/main.3516c477.js",
+    "main.js": "/se-europe-pl/static/js/main.0c5723af.js",
     "static/js/453.5ec52b59.chunk.js": "/se-europe-pl/static/js/453.5ec52b59.chunk.js",
     "static/media/se.mp4": "/se-europe-pl/static/media/se.faa9ddf07bfc3e4ac5ca.mp4",
     "static/media/sustainability.png": "/se-europe-pl/static/media/sustainability.9b96f89edde6a890813d.png",
@@ -77,7 +77,6 @@
     "static/media/anna-ch.png": "/se-europe-pl/static/media/anna-ch.b4855d0983247149c2e0.png",
     "static/media/lyzka.png": "/se-europe-pl/static/media/lyzka.221f46e57bb923b9c8d2.png",
     "static/media/zlacza.png": "/se-europe-pl/static/media/zlacza.da60bb6be38f7c5c6e23.png",
-    "static/media/100838.png": "/se-europe-pl/static/media/100838.2bef802982ca972c7587.png",
     "static/media/snow-side.png": "/se-europe-pl/static/media/snow-side.beac6b3549f56d948439.png",
     "static/media/Outfit-SemiBold.ttf": "/se-europe-pl/static/media/Outfit-SemiBold.ea851e9b6c1d21f620c1.ttf",
     "static/media/Outfit-Regular.ttf": "/se-europe-pl/static/media/Outfit-Regular.e853df41b41bc9489a8b.ttf",
@@ -96,11 +95,11 @@
     "static/media/se-logo.png": "/se-europe-pl/static/media/se-logo.9fd70630eff6c70ae952.png",
     "index.html": "/se-europe-pl/index.html",
     "main.6ed9cf7e.css.map": "/se-europe-pl/static/css/main.6ed9cf7e.css.map",
-    "main.3516c477.js.map": "/se-europe-pl/static/js/main.3516c477.js.map",
+    "main.0c5723af.js.map": "/se-europe-pl/static/js/main.0c5723af.js.map",
     "453.5ec52b59.chunk.js.map": "/se-europe-pl/static/js/453.5ec52b59.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6ed9cf7e.css",
-    "static/js/main.3516c477.js"
+    "static/js/main.0c5723af.js"
   ]
 }
